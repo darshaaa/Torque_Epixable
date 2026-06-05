@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://torquedetailingstudio.com
+
+# Sitemaps
+Sitemap: https://torquedetailingstudio.com/sitemap.xml
