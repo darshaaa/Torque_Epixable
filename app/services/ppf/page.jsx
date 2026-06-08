@@ -76,11 +76,11 @@ export default function page() {
   const galleryItems = [
   {
     type: "video",
-    src: "/videos/ppfreel1.mp4",
+    src: "/videos/ppfreel1-new.mp4",
   },
   {
     type: "video",
-    src: "/videos/ppfreel2.mp4",
+    src: "/videos/ppfreel2-new.mp4",
   },
   {
     type: "image",
