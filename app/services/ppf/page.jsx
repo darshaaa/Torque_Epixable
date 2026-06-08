@@ -12,12 +12,12 @@ const benefits = [
     description: "Paint Protection Films (PPFs), especially those marketed as instant healing or self-healing, have the ability to repair minor scratches and imperfections without external heat application",
   },
   {
-    icon: "/icons/Extreme.png",
+    icon: "/icons/extreme.png",
     title: "Extreme high gloss finish",
     description: "An extreme high gloss car finish refers to a paint job that achieves a mirror-like, exceptionally deep shine, often resembling a polished, wet look",
   },
   {
-    icon: "/icons/Hydrophobic.png",
+    icon: "/icons/hydrophobic.png",
     title: "Hydrophobic top coat",
     description: "Hydrophobic coatings provide a 'water-repellent' seal on a vehicle. They're great for 'repelling' water and dirt, which can make it easier when it comes to cleaning your car.",
   },
@@ -76,15 +76,11 @@ export default function page() {
   const galleryItems = [
   {
     type: "video",
-    src: "/videos/ppf.mp4",
+    src: "/videos/ppfreel1.mp4",
   },
   {
     type: "video",
-    src: "/videos/ppf1.mp4",
-  },
-  {
-    type: "video",
-    src: "/videos/ppf2.mp4",
+    src: "/videos/ppfreel2.mp4",
   },
   {
     type: "image",

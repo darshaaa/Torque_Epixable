@@ -7,27 +7,27 @@ import Footer from "../../Components/Footer";
 
 const benefits = [
   {
-    icon: "/icons/Enhanced.png",
+    icon: "/icons/enhanced.png",
     title: "Enhanced slickness",
     description: "Paint Protection Films (PPFs), especially those marketed as instant healing or self-healing, have the ability to repair minor scratches and imperfections without external heat application",
   },
   {
-    icon: "/icons/Advanced.png",
+    icon: "/icons/advanced.png",
     title: "Higher abraslion resistance",
     description: "An extreme high gloss car finish refers to a paint job that achieves a mirror-like, exceptionally deep shine, often resembling a polished, wet look",
   },
   {
-    icon: "/icons/Grossler.png",
+    icon: "/icons/grossler.png",
     title: "Grossler aesthetics",
     description: "Hydrophobic coatings provide a 'water-repellent' seal on a vehicle. They're great for 'repelling' water and dirt, which can make it easier when it comes to cleaning your car.",
   },
   {
-    icon: "/icons/Longer.png",
+    icon: "/icons/longer.png",
     title: "Longer durability",
     description: "Advanced chemical resistance in cars is primarily achieved through specialized coatings, particularly graphene and ceramic coatings, which form a protective layer on the paint, enhancing its durability and resistance to various chemical agents.",
   },
   {
-    icon: "/icons/Less.png",
+    icon: "/icons/less.png",
     title: "Less water spotting",
     description: "High-temperature resistance in cars is crucial for ensuring the durability and performance of various components, particularly those exposed to engine heat or exhaust fumes.",
   },
