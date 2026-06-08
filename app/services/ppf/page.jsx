@@ -149,7 +149,7 @@ export default function page() {
               playsInline
               className="w-full max-w-[550px] h-[320px] lg:h-[380px] object-cover rounded-2xl shadow-2xl"
             >
-              <source src="/videos/ppf.mp4" type="video/mp4" />
+              <source src="C:\Users\darsh\Downloads\Porsche Final-new.mp4" type="video/mp4" />
             </video>
           </div>
         </div>
