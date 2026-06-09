@@ -76,20 +76,17 @@ export default function page() {
   const galleryItems = [
   {
     type: "video",
-    src: "/videos/ppfreel1-new.mp4",
+    src: "https://res.cloudinary.com/dnr4pvgzd/video/upload/v1780978335/ppfreel1-new_wsb7es.mp4",
   },
   {
     type: "video",
-    src: "/videos/ppfreel2-new.mp4",
+    src: "https://res.cloudinary.com/dnr4pvgzd/video/upload/v1780978382/ppfreel2-new_cyt7e1.mp4",
   },
   {
     type: "image",
     src:"/images/ppf4.jpg",
   },
-  {
-    type: "image",
-    src: "/images/ppf5.jpg",
-  },
+ 
 ];
 
   const scrollRef1 = useRef(null);
@@ -149,7 +146,7 @@ export default function page() {
               playsInline
               className="w-full max-w-[550px] h-[320px] lg:h-[380px] object-cover rounded-2xl shadow-2xl"
             >
-              <source src="C:\Users\darsh\OneDrive\Desktop\Torque-main\public\videos\ppf.mp4" type="video/mp4" />
+              <source src="https://res.cloudinary.com/dnr4pvgzd/video/upload/v1780978289/Porsche_Final-new_rijyfp.mp4" type="video/mp4" />
             </video>
           </div>
         </div>
