@@ -77,6 +77,17 @@ const Navlinks = ({ isComplete }) => {
               </a>
 
               <a
+                href="/portfolio"
+                className={`relative text-xl font-medium transition-all duration-300 ${
+                  pathname === "/portfolio"
+                    ? "text-cyan-500 after:absolute after:left-0 after:-bottom-2 after:h-[2px] after:w-full after:bg-cyan-500"
+                    : "text-white hover:text-cyan-500 after:absolute after:left-0 after:-bottom-2 after:h-[2px] after:w-0 after:bg-cyan-500 after:transition-all after:duration-300 hover:after:w-full"
+                }`}
+              >
+                Portfolio
+              </a>
+
+              <a
                 href="/shoppage"
                 className={`relative text-xl font-medium transition-all duration-300 ${
                   pathname === "/shoppage"

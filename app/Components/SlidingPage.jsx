@@ -6,12 +6,12 @@ import Image from "next/image";
 import Link from "next/link";
 
 const logos = [
-  { src: "/Images/logo.png", alt: "Groupe Lauzon" },
-  { src: "/Images/onyx_logo_-_new-copy.png", alt: "Mercedes-Benz" },
-  { src: "/Images/onyx_logo_-1.png", alt: "Groupe Lauzon" },
-  { src: "/Images/hlogo.png", alt: "Mercedes-Benz" },
-  { src: "/Images/onyx_logo2 (1).png", alt: "Groupe Lauzon" },
-  { src: "/Images/onyx_logo3 (1).png", alt: "Mercedes-Benz" },
+  { src: "/images/logo.png", alt: "Groupe Lauzon" },
+  { src: "/images/onyx_logo_-_new-copy.png", alt: "Mercedes-Benz" },
+  { src: "/images/onyx_logo_-1.png", alt: "Groupe Lauzon" },
+  { src: "/images/hlogo.png", alt: "Mercedes-Benz" },
+  { src: "/images/onyx_logo2 (1).png", alt: "Groupe Lauzon" },
+  { src: "/images/onyx_logo3 (1).png", alt: "Mercedes-Benz" },
 ];
 
 const SlidingPage = () => {

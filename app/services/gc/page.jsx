@@ -98,7 +98,7 @@ export default function page() {
       playsInline
       className="w-full max-w-[550px] h-[320px] lg:h-[380px] object-cover rounded-2xl shadow-2xl"
     >
-      <source src="/videos/ppf1.mp4" type="video/mp4" />
+      <source src="https://res.cloudinary.com/dnr4pvgzd/video/upload/v1780979396/ppf1-new-final_oykzxz.mp4" type="video/mp4" />
     </video>
   </div>
 

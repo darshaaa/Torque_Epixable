@@ -107,22 +107,22 @@ const onSubmit = async (data) => {
   title: "PAINT PROTECTION FILM",
   description:
     "PAINT PROTECTION FILM or PPF This is a transparent film generally applied to painted surfaces of a new or used car in order to protect the vehicle’s paint from stone chips, bug splatters, minor abrasions and other damages.",
-  video: "/videos/ppf.mp4",
+  video: "https://res.cloudinary.com/dnr4pvgzd/video/upload/v1780978289/Porsche_Final-new_rijyfp.mp4",
   linkUrl: "/services/ppf"
 },
     {
       title: "GRAPHENE COATING",
       description:
         "Graphene coating is a cutting-edge protective layer that enhances the durability and shine of your vehicle's paint. It provides superior resistance to scratches, UV rays, and environmental contaminants.",
-          video: "/videos/ppf1.mp4",
+          video: "https://res.cloudinary.com/dnr4pvgzd/video/upload/v1780979396/ppf1-new-final_oykzxz.mp4",
          linkUrl: "/services/gc"
     },
     {
       title: "CERAMIC COATING",
       description:
         "Ceramic coating is a liquid polymer applied to the exterior of a vehicle, creating a protective layer that enhances shine and provides resistance against scratches, UV rays, and chemical stains.",
-      image:
-        "https://i.ibb.co/fzzgjpFr/C-C.jpg",
+      video:
+        "https://res.cloudinary.com/dnr4pvgzd/video/upload/v1780981606/Ceramic_Torque-final_parqlg.mp4",
       linkUrl: "/services/cc"
     },
     {

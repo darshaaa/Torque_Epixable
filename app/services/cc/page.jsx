@@ -98,7 +98,7 @@ export default function page() {
       playsInline
       className="w-full max-w-[650px] h-[420px] object-cover rounded-2xl shadow-2xl"
     >
-      <source src="/videos/ppf.mp4" type="video/mp4" />
+      <source src="https://res.cloudinary.com/dnr4pvgzd/video/upload/v1780981606/Ceramic_Torque-final_parqlg.mp4" type="video/mp4" />
     </video>
   </div>
 
