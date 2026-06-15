@@ -56,53 +56,32 @@ export default function page() {
       <Navlinks isComplete={true} />
       
       {/* Hero Section */}
-      <div
-        className="w-full h-[100vh] lg:h-[80vh] 2xl:h-[60vh] flex items-center bg-cover"
-        style={{
-          backgroundImage: `linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)),`,
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover"
-        }}
+<div className="w-full h-[100vh] lg:h-[80vh] 2xl:h-[70vh] flex items-center relative overflow-hidden">
+  <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover">
+    <source src="https://res.cloudinary.com/dnr4pvgzd/video/upload/v1780981606/Ceramic_Torque-final_parqlg.mp4" type="video/mp4" />
+  </video>
+  <div className="absolute inset-0 bg-black/70" />
+  <div className="relative z-10 w-full max-w-7xl mx-auto px-4">
+    <div className="text-left lg:w-1/2">
+      <h1 className="text-4xl md:text-5xl lg:text-6xl lg:mt-20 font-bold mb-4 text-cyan-300 tracking-tight">
+        Ceramic Coating
+      </h1>
+      <p className="text-white mt-4 md:mt-[5%] w-full text-sm md:text-base lg:text-[17px] leading-relaxed max-w-lg">
+        Ceramic coating is a liquid polymer applied to cars that bonds with paint,
+        providing glossy, long-lasting protection against dirt and damage.
+      </p>
+      
+      <a
+        href="https://wa.me/919686968315?text=I%20want%20to%20know%20more%20about%20Ceramic%20Coating"
+        target="_blank"
+        rel="noopener noreferrer"
       >
-       <div className="w-full max-w-7xl mx-auto px-4 flex flex-col lg:flex-row items-center justify-between gap-12">
-
-  {/* Left Content */}
-  <div className="text-left lg:w-1/2">
-    <h1 className="text-4xl md:text-5xl lg:text-6xl lg:mt-20 font-bold mb-4 text-cyan-300 tracking-tight">
-      Ceramic Coating
-    </h1>
-
-    <p className="text-white mt-4 md:mt-[5%] w-full text-sm md:text-base lg:text-[17px] leading-relaxed max-w-lg">
-      Ceramic coating is a liquid polymer applied to cars that bonds with paint,
-      providing glossy, long-lasting protection against dirt and damage.
-    </p>
-
-    <a
-      href="https://wa.me/919686968315?text=I%20want%20to%20know%20more%20about%20Ceramic%20Coating"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <button className="w-32 font-semibold rounded-xl mt-6 cursor-pointer text-black h-11 bg-white">
-        Book Now
-      </button>
-    </a>
+        <button className="w-32 font-semibold rounded-xl mt-6 cursor-pointer text-black h-11 bg-white">
+          Book Now
+        </button>
+      </a>
+    </div>
   </div>
-
-  {/* Right Video */}
-  <div className="lg:w-1/2 flex justify-center mt-40">
-    <video
-      autoPlay
-      muted
-      loop
-      playsInline
-      className="w-full max-w-[650px] h-[420px] object-cover rounded-2xl shadow-2xl"
-    >
-      <source src="https://res.cloudinary.com/dnr4pvgzd/video/upload/v1780981606/Ceramic_Torque-final_parqlg.mp4" type="video/mp4" />
-    </video>
-  </div>
-
-</div>
       </div>
 
       {/* Image Gallery Section */}

@@ -90,45 +90,54 @@ const SlidingPage = () => {
         {/* Responsive Image Cards */}
         <div className="w-full flex flex-col md:flex-row justify-center items-center gap-6 mt-10 md:mt-20">
 
-          {/* PPF Card */}
-          <Link href="/services/ppf" className="w-full md:w-[30%] overflow-hidden">
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              className="w-full h-96 sm:h-[28rem] rounded-2xl bg-[url('https://i.ibb.co/RkZp6xV1/PPF.jpg')] bg-cover bg-center cursor-pointer relative"
-            >
-              <motion.div className="absolute bottom-0 left-0 right-0 h-[30%] lg:mt-10 flex-col flex justify-center items-center bg-black bg-opacity-80 px-4">
-                <h1 className="text-xl sm:text-2xl font-semibold text-white mb-2">Paint Protection Film</h1>
-                <button className="bg-white text-black font-medium px-4 py-2 rounded-md lg:mt-2">Know more</button>
-              </motion.div>
-            </motion.div>
-          </Link>
+          
+         {/* PPF Card */}
+<Link href="/services/ppf" className="w-full md:w-[30%] overflow-hidden">
+  <motion.div
+    whileHover={{ scale: 1.05 }}
+    className="w-full h-96 sm:h-[28rem] rounded-2xl cursor-pointer relative overflow-hidden"
+  >
+    <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover" >
+      <source src="https://res.cloudinary.com/dnr4pvgzd/video/upload/v1780978289/Porsche_Final-new_rijyfp.mp4" type="video/mp4" />
+    </video>
+    <motion.div className="absolute bottom-0 left-0 right-0 h-[30%] lg:mt-10 flex-col flex justify-center items-center bg-black bg-opacity-80 px-4">
+      <h1 className="text-xl sm:text-2xl font-semibold text-white mb-2">Paint Protection Film</h1>
+      <button className="bg-white text-black font-medium px-4 py-2 rounded-md lg:mt-2">Know more</button>
+    </motion.div>
+  </motion.div>
+</Link>
 
-          {/* GC Card */}
-          <Link href="/services/gc" className="w-full md:w-[30%] overflow-hidden">
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              className="w-full h-96 sm:h-[28rem] rounded-2xl bg-[url('https://img.freepik.com/premium-photo/applying-nanoceramics-cars-car-paint-protection-concept_153608-1180.jpg?ga=GA1.1.1515336155.1743059816&semt=ais_hybrid&w=740')] bg-cover bg-center cursor-pointer relative"
-            >
-              <motion.div className="absolute bottom-0 left-0 right-0 h-[30%] lg:mt-10 flex-col flex justify-center items-center bg-black bg-opacity-80 px-4">
-                <h1 className="text-xl sm:text-2xl font-semibold text-white mb-2">Graphene Coating</h1>
-                <button className="bg-white text-black font-medium px-4 py-2 rounded-md lg:mt-2">Know more</button>
-              </motion.div>
-            </motion.div>
-          </Link>
+{/* GC Card */}
+<Link href="/services/gc" className="w-full md:w-[30%] overflow-hidden">
+  <motion.div
+    whileHover={{ scale: 1.05 }}
+    className="w-full h-96 sm:h-[28rem] rounded-2xl cursor-pointer relative overflow-hidden"
+  >
+    <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover">
+      <source src="https://res.cloudinary.com/dnr4pvgzd/video/upload/v1780979396/ppf1-new-final_oykzxz.mp4" type="video/mp4" />
+    </video>
+    <motion.div className="absolute bottom-0 left-0 right-0 h-[30%] lg:mt-10 flex-col flex justify-center items-center bg-black bg-opacity-80 px-4">
+      <h1 className="text-xl sm:text-2xl font-semibold text-white mb-2">Graphene Coating</h1>
+      <button className="bg-white text-black font-medium px-4 py-2 rounded-md lg:mt-2">Know more</button>
+    </motion.div>
+  </motion.div>
+</Link>
 
-          {/* CC Card */}
-          <Link href="/services/cc" className="w-full md:w-[30%] overflow-hidden">
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              className="w-full h-96 sm:h-[28rem] rounded-2xl bg-[url('https://i.ibb.co/fzzgjpFr/C-C.jpg')] bg-cover bg-center cursor-pointer relative"
-            >
-              <motion.div className="absolute bottom-0 left-0 right-0 h-[30%] lg:mt-10 flex-col flex justify-center items-center bg-black bg-opacity-80 px-4">
-                <h1 className="text-xl sm:text-2xl font-semibold text-white mb-2">Ceramic Coating</h1>
-                <button className="bg-white text-black font-medium px-4 py-2 rounded-md lg:mt-2">Know more</button>
-              </motion.div>
-            </motion.div>
-          </Link>
-
+{/* CC Card */}
+<Link href="/services/cc" className="w-full md:w-[30%] overflow-hidden">
+  <motion.div
+    whileHover={{ scale: 1.05 }}
+    className="w-full h-96 sm:h-[28rem] rounded-2xl cursor-pointer relative overflow-hidden"
+  >
+    <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover">
+      <source src="https://res.cloudinary.com/dnr4pvgzd/video/upload/v1780981606/Ceramic_Torque-final_parqlg.mp4" type="video/mp4" />
+    </video>
+    <motion.div className="absolute bottom-0 left-0 right-0 h-[30%] lg:mt-10 flex-col flex justify-center items-center bg-black bg-opacity-80 px-4">
+      <h1 className="text-xl sm:text-2xl font-semibold text-white mb-2">Ceramic Coating</h1>
+      <button className="bg-white text-black font-medium px-4 py-2 rounded-md lg:mt-2">Know more</button>
+    </motion.div>
+  </motion.div>
+</Link>
         </div>
 
 

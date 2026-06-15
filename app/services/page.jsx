@@ -141,14 +141,7 @@ const onSubmit = async (data) => {
         "https://i.ibb.co/qYyKdKr2/ED.jpg",
       linkUrl: "/services/ed"
     },
-    {
-      title: "AUTO DETAILING",
-      description:
-        "Give your vehicle a complete makeover, inside and out. Experience a sparkling exterior and a refreshed interior with our meticulous cleaning and restoration service.",
-      image:
-        "https://i.ibb.co/Myf1pM4d/AD.jpg",
-      linkUrl: "/services/ad"
-    },
+    
     {
       title: "VINYL WRAP",
       description:
@@ -173,14 +166,7 @@ const onSubmit = async (data) => {
         "https://i.ibb.co/r2QbsNXP/WC.jpg",
       linkUrl: "/services/wc"
     },
-    {
-      title: "HEADLIGHT RESTORATION",
-      description:
-        "Improve night driving safety by restoring cloudy or yellowed headlights to their original clarity for brighter, clearer visibility.",
-      image:
-        "https://i.ibb.co/0yX6Zc37/HR.jpg",
-      linkUrl: "/services/hr"
-    },
+   
     {
       title: "INTERIOR DISINFECTION",
       description:
