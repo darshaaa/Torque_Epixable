@@ -137,8 +137,8 @@ const onSubmit = async (data) => {
       title: "EXTERIOR DETAILING",
       description:
         "Thorough cleaning, restoration, and finishing of a vehicle's exterior to produce a show-quality level of detail.",
-      image:
-        "https://i.ibb.co/qYyKdKr2/ED.jpg",
+      video:
+        "https://res.cloudinary.com/dnr4pvgzd/video/upload/v1781692177/ed_turhm9.mov",
       linkUrl: "/services/ed"
     },
     
@@ -162,8 +162,8 @@ const onSubmit = async (data) => {
       title: "WINDSHIELD COATING",
       description:
         "Enhance visibility and safety with an advanced hydrophobic coating that keeps your windshield clean, providing clearer vision during heavy rains and reducing hard water spots.",
-      image:
-        "https://i.ibb.co/r2QbsNXP/WC.jpg",
+      video:
+        "https://res.cloudinary.com/dnr4pvgzd/video/upload/v1781692810/gc_rfo6nc.mov",
       linkUrl: "/services/wc"
     },
    
@@ -187,8 +187,8 @@ const onSubmit = async (data) => {
       title: "A/C STERILIZATION",
       description:
         "With a deep clean and sanitization of your A/C ducts and filters. You can be rest assured, with clean and fresh air inside your car",
-      image:
-        "https://i.ibb.co/wh2GWymL/AC.jpg",
+      video:
+        "https://res.cloudinary.com/dnr4pvgzd/video/upload/v1781692284/ac_lfotsm.mov",
       linkUrl: "/services/acs"
     },
     {
