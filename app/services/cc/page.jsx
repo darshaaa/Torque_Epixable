@@ -37,9 +37,10 @@ const benefits = [
 export default function page() {
 
     const images = [
-"https://img.freepik.com/premium-photo/car-body-polishing-process-detailing-workshop_153608-1185.jpg?ga=GA1.1.1515336155.1743059816&semt=ais_hybrid&w=740",
-    "https://img.freepik.com/free-photo/beautiful-car-polishing-service_23-2149212247.jpg?ga=GA1.1.1515336155.1743059816&semt=ais_hybrid&w=740",
-    "https://img.freepik.com/premium-photo/car-polish-wax-worker-hands-holding-polisher-polish-car-detailing-valeting-concept-taillight-red-car_152904-4650.jpg?ga=GA1.1.1515336155.1743059816&semt=ais_hybrid&w=740",
+"/images/cc1.jpg",
+    "/images/cc2.jpg",
+    "/images/cc3.jpg",
+    "/images/cc4.jpg",
   ];
 
     const scrollRef1 = useRef(null);

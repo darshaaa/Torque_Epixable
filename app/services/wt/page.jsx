@@ -37,9 +37,7 @@ const benefits = [
 export default function page() {
 
     const images = [
-    "https://img.freepik.com/premium-photo/car-tinting-worker-applying-tinting-foil-car-window_473712-3600.jpg?ga=GA1.1.1515336155.1743059816&semt=ais_hybrid&w=740",
-    "https://img.freepik.com/premium-photo/male-specialist-applying-car-tinting-film-installation-process-tinted-auto-glass-installing-procedure_266732-24247.jpg?ga=GA1.1.1515336155.1743059816&semt=ais_hybrid&w=740",
-    "https://img.freepik.com/premium-photo/installs-tint-film-car-glass_1339-38259.jpg?ga=GA1.1.1515336155.1743059816&semt=ais_hybrid&w=740",
+    "/images/wt1.jpg",
   ];
 
     const scrollRef1 = useRef(null);
@@ -56,32 +54,32 @@ export default function page() {
       <Navlinks isComplete={true} />
       
       {/* Hero Section */}
-      <div
-        className="w-full h-[100vh] lg:h-[80vh] 2xl:h-[60vh] flex items-center bg-cover"
-        style={{
-          backgroundImage: `linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://lakdfs.sirv.com/Images/WT.jpg')`,
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover"
-        }}
+     {/* Hero Section */}
+<div className="w-full h-[100vh] lg:h-[80vh] 2xl:h-[70vh] flex items-center relative overflow-hidden">
+  <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover">
+    <source src="https://res.cloudinary.com/dnr4pvgzd/video/upload/v1781688559/wt_xjnpng.mov" type="video/mp4" />
+  </video>
+  <div className="absolute inset-0 bg-black/70" />
+  <div className="relative z-10 w-full max-w-7xl mx-auto px-4">
+    <div className="text-left lg:w-1/2">
+      <h1 className="text-4xl md:text-5xl lg:text-6xl lg:mt-20 font-bold mb-4 text-cyan-300 tracking-tight">
+        Window Tint
+      </h1>
+      <p className="text-white mt-4 md:mt-[5%] w-full text-sm md:text-base lg:text-[17px] leading-relaxed max-w-lg">
+        It enhances privacy, reduces glare, blocks UV rays, and protects your interior from fading and heat damage. Customizable options offer the perfect blend of style and function.
+      </p>
+      
+      <a
+        href="https://wa.me/919686968315?text=I%20want%20to%20know%20more%20about%20Window%20Tint."
+        target="_blank"
+        rel="noopener noreferrer"
       >
-        <div className="text-left ml-[6%] lg:ml-[5%] 2xl:ml-[18%] mb-10 px-4 md:px-0">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl lg:mt-20 font-bold mb-4 text-cyan-300 tracking-tight">
-            Window Tint
-          </h1>
-          <p className="text-white mt-4 md:mt-[5%] w-full md:w-[90%] lg:w-[90%] text-sm md:text-base lg:text-[17px] leading-relaxed max-w-xs md:max-w-md lg:max-w-lg">
- It enhances privacy, reduces glare, blocks UV rays, and protects your interior from fading and heat damage. Customizable options offer the perfect blend of style and function.
-          </p>
-          <a
-            href="https://wa.me/919686968315?text=I%20want%20to%20know%20more%20about%20Window%20Tint."
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <button className="w-32 md:w-35 font-semibold rounded-xl mt-6 md:mt-[4%] cursor-pointer text-black h-11 bg-white px-4">
-              Book Now
-            </button>
-          </a>
-        </div>
+        <button className="w-32 font-semibold rounded-xl mt-6 cursor-pointer text-black h-11 bg-white">
+          Book Now
+        </button>
+      </a>
+    </div>
+      </div>
       </div>
 
       {/* Image Gallery Section */}

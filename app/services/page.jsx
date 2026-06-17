@@ -129,8 +129,8 @@ const onSubmit = async (data) => {
       title: "INTERIOR DETAILING",
       description:
         "Deep cleaning and protection of all interior surfaces including seats, carpets, and dashboard. Keeps your ride looking brand new inside.",
-      image:
-        "https://i.ibb.co/HT235nHs/IN-D.jpg",
+      video:
+        "https://res.cloudinary.com/dnr4pvgzd/video/upload/v1781688491/id_ubv1tv.mov",
       linkUrl: "/services/id"
     },
     {
@@ -146,16 +146,16 @@ const onSubmit = async (data) => {
       title: "VINYL WRAP",
       description:
         "Transform your vehicle with high-quality vinyl wraps. Choose from a variety of colors and custom designs for endless personalization.",
-      image:
-        "https://i.ibb.co/Gv3ZYJ9j/V-W.jpg",
+      video:
+        "https://res.cloudinary.com/dnr4pvgzd/video/upload/v1781689005/vx_k2al6l.mp4",
       linkUrl: "/services/vx"
     },
     {
       title: "WINDOW TINT",
       description:
         " It enhances privacy, reduces glare, blocks UV rays, and protects your interior from fading and heat damage. Customizable options offer the perfect blend of style and function.",
-      image:
-        "https://i.ibb.co/WdN1tyr/WT.jpg",
+      video:
+        "https://res.cloudinary.com/dnr4pvgzd/video/upload/v1781688559/wt_xjnpng.mov",
       linkUrl: "/services/wt"
     },
     {

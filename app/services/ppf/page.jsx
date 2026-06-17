@@ -84,7 +84,23 @@ export default function page() {
   },
   {
     type: "image",
+    src:"/images/ppf1.jpg",
+  },
+  {
+    type: "image",
+    src:"/images/ppf2.jpg",
+  },
+  {
+    type: "image",
+    src:"/images/ppf3.jpg",
+  },
+  {
+    type: "image",
     src:"/images/ppf4.jpg",
+  },
+  {
+    type: "image",
+    src:"/images/ppf5.jpg",
   },
  
 ];

@@ -34,7 +34,7 @@ const benefits = [
 ];
 
 
-export default function page() {
+export default function page() {/////
 
     const images = [
     "/images/gc1.jpg",
