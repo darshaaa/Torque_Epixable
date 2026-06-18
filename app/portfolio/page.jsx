@@ -12,90 +12,191 @@ const allWorks = [
     title: "Porsche 911",
     category: "PPF",
     url: "https://i.ibb.co/84SL0b6S/TQ4.jpg",
+    type: "image",
   },
   {
     id: "2",
     title: "Mini Cooper Countryman",
     category: "PPF",
     url: "/images/ppf1.jpg",
+    type: "image",
   },
   {
     id: "3",
     title: "BE 6",
     category: "PPF",
     url: "/images/ppf2.jpg",
+    type: "image",
   },
   {
     id: "4",
     title: "Fortuner Legender",
     category: "PPF",
     url: "/images/ppf3.jpg",
+    type: "image",
   },
   {
     id: "5",
     title: "BMW X5",
     category: "PPF",
     url: "/images/ppf4.jpg",
+    type: "image",
   },
   {
     id: "6",
-    title: "BMW X5",
-    category: "Ceramic Coating",
-    url: "https://i.ibb.co/WNxHZYT6/TQ2.jpg",
+    title: "Lexus",
+    category: "PPF",
+    url: "/images/ppf6.jpg",
+    type: "image",
   },
   {
     id: "7",
-    title: "Mercedes Benz GLE",
-    category: "Ceramic Coating",
-    url: "/images/cc1.jpg",
+    title: "Fortuner Legender",
+    category: "PPF",
+    url: "/images/ppf7.jpg",
+    type: "image",
+  },
+
+  {
+    id: "ppf-v1",
+    title: "PPF Installation",
+    category: "PPF",
+    url: "https://res.cloudinary.com/dnr4pvgzd/video/upload/v1781762337/ppf11_pudcuh.mp4",
+    type: "video",
   },
   {
     id: "8",
-    title: "Audi Q5",
+    title: "BMW X5",
     category: "Ceramic Coating",
-    url: "/images/cc2.jpg",
+    url: "https://i.ibb.co/WNxHZYT6/TQ2.jpg",
+    type: "image",
   },
   {
     id: "9",
-    title: "Defender",
+    title: "Mercedes Benz GLE",
     category: "Ceramic Coating",
-    url: "/images/cc3.jpg",
+    url: "/images/cc1.jpg",
+    type: "image",
   },
   {
     id: "10",
-    title: "BMW X5",
+    title: "Audi Q5",
     category: "Ceramic Coating",
-    url: "/images/cc4.jpg",
+    url: "/images/cc2.jpg",
+    type: "image",
   },
   {
     id: "11",
-    title: "Mini Cooper",
-    category: "Car Wraps",
-    url: "https://i.ibb.co/NgNcFj5p/TQ3.jpg",
+    title: "Defender",
+    category: "Ceramic Coating",
+    url: "/images/cc3.jpg",
+    type: "image",
   },
- 
   {
     id: "12",
-    title: "Royal Enfield",
+    title: "BMW X5",
     category: "Ceramic Coating",
-    url: "https://i.ibb.co/xKPFrKDJ/TQ1.jpg",
+    url: "/images/cc4.jpg",
+    type: "image",
   },
   {
     id: "13",
-    title: "Mercedes Benz",
-    category: "Car Wraps",
-    url: "https://i.ibb.co/6RT7j6Nr/2025-05-07.jpg",
+    title: "Wolkswagen",
+    category: "Graphene Coating",
+    url: "/images/gc1.jpg",
+    type: "image",
   },
-  
-  
- 
+  {
+    id: "14",
+    title: "Royal Enfield",
+    category: "Bikes",
+    url: "https://i.ibb.co/xKPFrKDJ/TQ1.jpg",
+    type: "image",
+  },
+  {
+    id: "15",
+    title: "Vstrom",
+    category: "Bikes",
+    url: "/images/bikes1.jpg",
+    type: "image",
+  },
+  {
+    id: "16",
+    title: "Kawasaki 900",
+    category: "Bikes",
+    url: "/images/bikes2.jpg",
+    type: "image",
+  },
+  {
+    id: "17",
+    title: "Pulsar NS400",
+    category: "Bikes",
+    url: "/images/bikes3.jpg",
+    type: "image",
+  },
+  {
+    id: "18",
+    title: "Ducati",
+    category: "Bikes",
+    url: "/images/bikes4.jpg",
+    type: "image",
+  },
+  {
+    id: "19",
+    title: "Triumph",
+    category: "Bikes",
+    url: "/images/bikes5.jpg",
+    type: "image",
+  },
+  {
+    id: "20",
+    title: "BE6",
+    category: "Graphene Coating",
+    url: "/images/gc2.jpg",
+    type: "image",
+  },
+  {
+    id: "21",
+    title: "Audi Q5",
+    category: "Graphene Coating",
+    url: "/images/gc3.jpg",
+    type: "image",
+  },
+  {
+    id: "22",
+    title: "BE6",
+    category: "Graphene Coating",
+    url: "/images/gc4.jpg",
+    type: "image",
+  },
+  {
+    id: "bike-v1",
+    title: "Bike Detailing",
+    category: "Bikes",
+    url: "https://res.cloudinary.com/dnr4pvgzd/video/upload/v1781763200/bikes7_ak0cd7.mp4",
+    type: "video",
+  },
+  {
+    id: "bike-v2",
+    title: "Bike Coating",
+    category: "Bikes",
+    url: "https://res.cloudinary.com/dnr4pvgzd/video/upload/v1781763214/bikes8_uogntb.mp4",
+    type: "video",
+  },
+  {
+    id: "bike-v3",
+    title: "Bike PPF",
+    category: "Bikes",
+    url: "https://res.cloudinary.com/dnr4pvgzd/video/upload/v1781763231/bikes9_xzc9kq.mp4",
+    type: "video",
+  },
 ];
 
-const categories = ["All", "PPF", "Ceramic Coating", "Car Wraps"];
+const categories = ["All", "PPF", "Ceramic Coating", "Graphene Coating", "Bikes"];
 
 const Page = () => {
   const [activeFilter, setActiveFilter] = useState("All");
- const [lightbox, setLightbox] = useState(null);
+  const [lightbox, setLightbox] = useState(null);
 
   const filtered =
     activeFilter === "All"
@@ -173,13 +274,29 @@ const Page = () => {
                 exit={{ opacity: 0, scale: 0.95 }}
                 transition={{ duration: 0.35 }}
                 className="relative group cursor-pointer overflow-hidden rounded-sm aspect-square"
-                onClick={() => setLightbox({ url: work.url, title: work.title })}
+                onClick={() => setLightbox({ url: work.url, title: work.title, type: work.type })}
               >
-                <img
-                  src={work.url}
-                  alt={work.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                />
+                {work.type === "video" ? (
+  <>
+   <video
+  src={work.url}
+  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+  muted
+  autoPlay
+  loop
+  playsInline
+  preload="metadata"
+  onMouseEnter={(e) => e.currentTarget.play()}
+  onMouseLeave={(e) => { e.currentTarget.pause(); e.currentTarget.currentTime = 0; }}
+/>
+  </>
+                ) : (
+                  <img
+                    src={work.url}
+                    alt={work.title}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                )}
                 {/* Hover overlay */}
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/55 transition-all duration-300 flex flex-col items-start justify-end p-4 opacity-0 group-hover:opacity-100">
                   <span className="text-[#00DAFF] text-xs uppercase tracking-widest mb-1">
@@ -215,11 +332,20 @@ const Page = () => {
               className="relative max-w-4xl w-full"
               onClick={(e) => e.stopPropagation()}
             >
-              <img
-                src={lightbox.url}
-                alt={lightbox.title}
-                className="w-full max-h-[80vh] object-contain rounded-sm"
-              />
+              {lightbox.type === "video" ? (
+                <video
+                  src={lightbox.url}
+                  className="w-full max-h-[80vh] object-contain rounded-sm"
+                  controls
+                  autoPlay
+                />
+              ) : (
+                <img
+                  src={lightbox.url}
+                  alt={lightbox.title}
+                  className="w-full max-h-[80vh] object-contain rounded-sm"
+                />
+              )}
               <div className="mt-3 flex items-center justify-between">
                 <p className="text-white font-medium text-lg">{lightbox.title}</p>
                 <button
