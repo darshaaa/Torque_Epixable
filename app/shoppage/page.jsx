@@ -379,28 +379,28 @@ const Page = () => {
     {
       id: 1,
       title: "Engine Coating",
-      image: "https://i.ibb.co/SwVrQ885/TR2.jpg",
+      image: "/product/eng.png",
       mrp: 760,
-      discountedPrice: 500,
-      discountPercentage: 35,
+      discountedPrice: 570,
+      discountPercentage: 25,
       tag: "featured"
     },
     {
       id: 2,
       title: "Tar & Adhesive Remover",
-      image: "https://i.ibb.co/pvp7nzsb/TR4.jpg",
+      image: "/product/tar.png",
       mrp: 540,
-      discountedPrice: 399,
+      discountedPrice: 405,
       discountPercentage: 25,
       tag: "bestseller"
     },
     {
       id: 3,
       title: "Upholstery Cleaner",
-      image: "https://i.ibb.co/SwVrQ885/TR2.jpg",
+      image: "/product/uph.png",
       mrp: 590,
-      discountedPrice: 390,
-      discountPercentage: 35,
+      discountedPrice:443,
+      discountPercentage: 25,
       tag: "featured"
     },
     {
@@ -408,14 +408,14 @@ const Page = () => {
       title: "Glass Cleaner",
       image: "https://i.ibb.co/SwVrQ885/TR2.jpg",
       mrp: 290,
-      discountedPrice: 190,
-      discountPercentage: 35,
+      discountedPrice: 218,
+      discountPercentage: 25,
       tag: "featured"
     },
     {
       id: 5,
       title: "Odur Remover & Cabin Sanitizer",
-      image: "https://i.ibb.co/bjXwx3tC/TR3.jpg",
+      image: "/product/odo.png",
       mrp: 630,
       discountedPrice: 410,
       discountPercentage: 40,
@@ -424,25 +424,25 @@ const Page = () => {
     {
       id: 6,
       title: "Herbal Rat Repellent",
-      image: "https://i.ibb.co/bjXwx3tC/TR3.jpg",
+      image: "/product/rat.png",
       mrp: 990,
-      discountedPrice: 640,
-      discountPercentage: 35,
+      discountedPrice: 743,
+      discountPercentage: 25,
       tag: "bestseller"
     },
     {
       id: 7,
       title: "Wind Shield Wash",
-      image: "https://i.ibb.co/SwVrQ885/TR2.jpg",
+      image: "/product/wind.png",
       mrp: 90,
-      discountedPrice: 59,
-      discountPercentage: 35,
+      discountedPrice: 68,
+      discountPercentage: 25,
       tag: "new"
     },
     {
       id: 8,
       title: "Plastic & Rubber Care",
-      image: "https://i.ibb.co/xS9xJPxZ/TR5.jpg",
+      image: "/product/pla.png",
       mrp: 540,
       discountedPrice: 410,
       discountPercentage: 35,
@@ -455,6 +455,15 @@ const Page = () => {
       mrp: 1199,
       discountedPrice: 720,
       discountPercentage: 40,
+      tag: "bestseller"
+    },
+    {
+      id: 10,
+      title: "A/C Sanitizer",
+      image: "/product/air.png",
+      mrp: 495,
+      discountedPrice: 371,
+      discountPercentage: 25,
       tag: "bestseller"
     }
   ];
