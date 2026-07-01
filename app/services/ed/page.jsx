@@ -36,11 +36,36 @@ const benefits = [
 
 export default function page() {
 
-    const images = [
-"https://img.freepik.com/premium-photo/worker-washing-car-with-active-foam-car-wash_179755-10785.jpg?ga=GA1.1.1515336155.1743059816&semt=ais_hybrid&w=740",
-    "https://img.freepik.com/premium-photo/detailing-center-worker-cleans-car-s-radiator-grill-with-brush_153608-2690.jpg?ga=GA1.1.1515336155.1743059816&semt=ais_hybrid&w=740",
-    "https://img.freepik.com/free-photo/selective-focus-shot-man-cleaning-car-s-back-headlight-with-microfiber-cloth_181624-46344.jpg?ga=GA1.1.1515336155.1743059816&semt=ais_hybrid&w=740",
-  ];
+    const galleryItems = [
+      {
+        type: "video",
+        src: "https://res.cloudinary.com/dnr4pvgzd/video/upload/v1782794832/ex-1_g48sui.mp4",
+      },
+      {
+        type: "video",
+        src: "https://res.cloudinary.com/dnr4pvgzd/video/upload/v1782794832/ex-4_jxoohl.mp4",
+      },
+      {
+        type: "video",
+        src: "https://res.cloudinary.com/dnr4pvgzd/video/upload/v1782794833/ex-3_hevori.mp4",
+      },
+      {
+        type: "video",
+        src: "https://res.cloudinary.com/dnr4pvgzd/video/upload/v1782794835/ex-2_cmillo.mp4",
+      },
+      {
+        type: "image",
+        src: "https://img.freepik.com/premium-photo/worker-washing-car-with-active-foam-car-wash_179755-10785.jpg?ga=GA1.1.1515336155.1743059816&semt=ais_hybrid&w=740",
+      },
+      {
+        type: "image",
+        src: "https://img.freepik.com/premium-photo/detailing-center-worker-cleans-car-s-radiator-grill-with-brush_153608-2690.jpg?ga=GA1.1.1515336155.1743059816&semt=ais_hybrid&w=740",
+      },
+      {
+        type: "image",
+        src: "https://img.freepik.com/free-photo/selective-focus-shot-man-cleaning-car-s-back-headlight-with-microfiber-cloth_181624-46344.jpg?ga=GA1.1.1515336155.1743059816&semt=ais_hybrid&w=740",
+      },
+    ];
 
     const scrollRef1 = useRef(null);
     const { scrollYProgress: progress1 } = useScroll({
@@ -91,17 +116,32 @@ export default function page() {
           className="w-full bg-black py-6 md:py-12 px-4 sm:px-6 md:px-10 lg:px-4 overflow-hidden"
         >
           <div className="flex flex-col md:flex-row gap-4 md:gap-6 lg:gap-6 items-center justify-center">
-            {images.map((img, index) => (
+            {galleryItems.map((item, index) => (
               <motion.div
                 key={index}
-                style={{ x: isDesktop ? xRightToLeft : 0, transition: "transform 0.6s ease-out" }}
+                style={{
+                  x: isDesktop ? xRightToLeft : 0,
+                  transition: "transform 0.6s ease-out",
+                }}
                 className="rounded-xl overflow-hidden shadow-lg w-full max-w-sm md:max-w-md lg:max-w-[400px] md:w-1/3"
               >
-                <img
-                  src={img}
-                  alt={`Gallery image ${index + 1}`}
-                  className="w-full h-48 md:h-56 lg:h-[250px] object-cover rounded-xl"
-                />
+                {item.type === "video" ? (
+                  <video
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    className="w-full h-48 md:h-56 lg:h-[250px] object-cover rounded-xl"
+                  >
+                    <source src={item.src} type="video/mp4" />
+                  </video>
+                ) : (
+                  <img
+                    src={item.src}
+                    alt={`Gallery ${index + 1}`}
+                    className="w-full h-48 md:h-56 lg:h-[250px] object-cover rounded-xl"
+                  />
+                )}
               </motion.div>
             ))}
           </div>

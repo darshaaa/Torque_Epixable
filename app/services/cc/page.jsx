@@ -155,7 +155,7 @@ Ceramic coating maintains your vehicle's glossy finish, prevents paint damage an
           {/* Side Image */}
           <div className="flex 2xl:ml-40 justify-center md:justify-start w-full px-4 md:px-0 lg:flex-shrink-0 lg:w-auto lg:mr-8">
             <img 
-              src="https://img.freepik.com/free-photo/close-up-car-care-process_23-2149193626.jpg?ga=GA1.1.1515336155.1743059816&semt=ais_hybrid&w=740"
+              src="/images/cc2.jpg"
               className="w-full max-w-sm md:max-w-md lg:max-w-md xl:max-w-lg h-64 md:h-80 2xl:h-125 2xl:ml-[-140px] lg:h-[350px] xl:h-[400px] object-cover object-center mt-4 md:mt-8 lg:mt-0 md:ml-[4%] lg:ml-0 rounded-2xl"
               style={{ marginRight: '30px' }}
               alt="Car care process" 

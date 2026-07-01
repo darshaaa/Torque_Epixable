@@ -36,11 +36,36 @@ const benefits = [
 
 export default function page() {
 
-    const images = [
-    "https://img.freepik.com/free-photo/auto-service-salon-doign-car-wrapping_23-2149593858.jpg?ga=GA1.1.1515336155.1743059816&semt=ais_hybrid&w=740",
-    "https://img.freepik.com/free-photo/auto-service-salon-doign-car-wrapping_23-2149593880.jpg?ga=GA1.1.1515336155.1743059816&semt=ais_hybrid&w=740",
-    "https://img.freepik.com/free-photo/auto-service-salon-doign-car-wrapping_23-2149593856.jpg?ga=GA1.1.1515336155.1743059816&semt=ais_hybrid&w=740",
-  ];
+    const galleryItems = [
+      {
+        type: "video",
+        src: "https://res.cloudinary.com/dnr4pvgzd/video/upload/v1782880711/v4_xyeqwg.mp4",
+      },
+      {
+        type: "video",
+        src: "https://res.cloudinary.com/dnr4pvgzd/video/upload/v1782880711/v1_ke5icy.mp4",
+      },
+      {
+        type: "video",
+        src: "https://res.cloudinary.com/dnr4pvgzd/video/upload/v1782880711/v2_muuwyo.mp4",
+      },
+      {
+        type: "video",
+        src: "https://res.cloudinary.com/dnr4pvgzd/video/upload/v1782880711/v3_omjh8k.mp4",
+      },
+      {
+        type: "image",
+        src: "https://img.freepik.com/free-photo/auto-service-salon-doign-car-wrapping_23-2149593858.jpg?ga=GA1.1.1515336155.1743059816&semt=ais_hybrid&w=740",
+      },
+      {
+        type: "image",
+        src: "https://img.freepik.com/free-photo/auto-service-salon-doign-car-wrapping_23-2149593880.jpg?ga=GA1.1.1515336155.1743059816&semt=ais_hybrid&w=740",
+      },
+      {
+        type: "image",
+        src: "https://img.freepik.com/free-photo/auto-service-salon-doign-car-wrapping_23-2149593856.jpg?ga=GA1.1.1515336155.1743059816&semt=ais_hybrid&w=740",
+      },
+    ];
 
     const scrollRef1 = useRef(null);
     const { scrollYProgress: progress1 } = useScroll({
@@ -92,17 +117,32 @@ export default function page() {
           className="w-full bg-black py-6 md:py-12 px-4 sm:px-6 md:px-10 lg:px-4 overflow-hidden"
         >
           <div className="flex flex-col md:flex-row gap-4 md:gap-6 lg:gap-6 items-center justify-center">
-            {images.map((img, index) => (
+            {galleryItems.map((item, index) => (
               <motion.div
                 key={index}
-                style={{ x: isDesktop ? xRightToLeft : 0, transition: "transform 0.6s ease-out" }}
+                style={{
+                  x: isDesktop ? xRightToLeft : 0,
+                  transition: "transform 0.6s ease-out",
+                }}
                 className="rounded-xl overflow-hidden shadow-lg w-full max-w-sm md:max-w-md lg:max-w-[400px] md:w-1/3"
               >
-                <img
-                  src={img}
-                  alt={`Gallery image ${index + 1}`}
-                  className="w-full h-48 md:h-56 lg:h-[250px] object-cover rounded-xl"
-                />
+                {item.type === "video" ? (
+                  <video
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    className="w-full h-48 md:h-56 lg:h-[250px] object-cover rounded-xl"
+                  >
+                    <source src={item.src} type="video/mp4" />
+                  </video>
+                ) : (
+                  <img
+                    src={item.src}
+                    alt={`Gallery ${index + 1}`}
+                    className="w-full h-48 md:h-56 lg:h-[250px] object-cover rounded-xl"
+                  />
+                )}
               </motion.div>
             ))}
           </div>
@@ -121,7 +161,7 @@ export default function page() {
               </div>
               <div className="space-y-4 mt-4 md:mt-6 text-gray-300 text-sm leading-relaxed max-w-full md:max-w-xl lg:max-w-140">
                 <p className="text-justify">
-Vinyl wrap is a thin, adhesive-backed film applied over a vehicle’s original paint to change its appearance or protect the surface. Available in a wide range of colors, finishes (matte, gloss, satin, chrome), and textures (carbon fiber, brushed metal), vinyl wraps offer endless customization possibilities without the permanence of a new paint job. The application process is non-invasive and reversible, making it a popular choice for car enthusiasts and businesses wanting to brand their vehicles.
+Vinyl wrap is a thin, adhesive-backed film applied over a vehicle's original paint to change its appearance or protect the surface. Available in a wide range of colors, finishes (matte, gloss, satin, chrome), and textures (carbon fiber, brushed metal), vinyl wraps offer endless customization possibilities without the permanence of a new paint job. The application process is non-invasive and reversible, making it a popular choice for car enthusiasts and businesses wanting to brand their vehicles.
                 </p>
                 <p className="text-justify">
 Beyond aesthetics, vinyl wrap also serves as a protective barrier against UV rays, scratches, road debris, and weather damage, helping preserve the factory paint underneath. It can cover the entire vehicle or just selected areas like the hood, roof, or mirrors. With proper care, a high-quality wrap can last 3 to 7 years. Vinyl wrapping is an affordable, reversible, and creative way to give your car a fresh, personalized look while protecting its original finish.
@@ -137,7 +177,7 @@ Beyond aesthetics, vinyl wrap also serves as a protective barrier against UV ray
                       Invisible and Durable Protection:
                     </h3>
                     <p className="text-gray-400 text-sm lg:text-sm lg:-mt-2 leading-relaxed lg:w-65">
- Provides a clear, strong layer that shields your vehicle’s surface from damage, wear, and elements.
+ Provides a clear, strong layer that shields your vehicle's surface from damage, wear, and elements.
                     </p>
                   </div>
                   <div className="flex-1 2xl:ml-[-60%] lg:ml-[-50%]">
@@ -145,7 +185,7 @@ Beyond aesthetics, vinyl wrap also serves as a protective barrier against UV ray
                       Preserves Value and Appearance:
                     </h3>
                     <p className="text-gray-400 text-sm lg:text-sm lg:-mt-2 leading-relaxed lg:w-70">
-            Maintains your vehicle’s showroom look, reduces wear, and helps retain higher resale or trade-in value.
+            Maintains your vehicle's showroom look, reduces wear, and helps retain higher resale or trade-in value.
                     </p>
                   </div>
                 </div>

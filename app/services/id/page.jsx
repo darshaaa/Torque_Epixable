@@ -36,11 +36,24 @@ const benefits = [
 
 export default function page() {
 
-    const images = [
-"https://img.freepik.com/premium-photo/detailing-car-seats-with-help-vacuum-extractor-cleaning-car-backseat-with-special-vacuum-nozzle_255847-13594.jpg?ga=GA1.1.1515336155.1743059816&semt=ais_hybrid&w=740",
-    "https://img.freepik.com/premium-photo/nanoceramic-coating-leather-car-seat-brown-upholstery-by-worker-blue-gloves-with-sponge-bottle_136863-2309.jpg?ga=GA1.1.1515336155.1743059816&semt=ais_hybrid&w=740",
-    "https://img.freepik.com/free-photo/still-life-cleaning-tools_23-2150552221.jpg?ga=GA1.1.1515336155.1743059816&semt=ais_hybrid&w=740",
-  ];
+    const galleryItems = [
+      {
+        type: "video",
+        src: "https://res.cloudinary.com/dnr4pvgzd/video/upload/v1782797371/ac-2_icwptt.mp4",
+      },
+      {
+        type: "image",
+        src: "https://img.freepik.com/premium-photo/detailing-car-seats-with-help-vacuum-extractor-cleaning-car-backseat-with-special-vacuum-nozzle_255847-13594.jpg?ga=GA1.1.1515336155.1743059816&semt=ais_hybrid&w=740",
+      },
+      {
+        type: "image",
+        src: "https://img.freepik.com/premium-photo/nanoceramic-coating-leather-car-seat-brown-upholstery-by-worker-blue-gloves-with-sponge-bottle_136863-2309.jpg?ga=GA1.1.1515336155.1743059816&semt=ais_hybrid&w=740",
+      },
+      {
+        type: "image",
+        src: "https://img.freepik.com/free-photo/still-life-cleaning-tools_23-2150552221.jpg?ga=GA1.1.1515336155.1743059816&semt=ais_hybrid&w=740",
+      },
+    ];
 
     const scrollRef1 = useRef(null);
     const { scrollYProgress: progress1 } = useScroll({
@@ -91,20 +104,36 @@ export default function page() {
           className="w-full bg-black py-6 md:py-12 px-4 sm:px-6 md:px-10 lg:px-4 overflow-hidden"
         >
           <div className="flex flex-col md:flex-row gap-4 md:gap-6 lg:gap-6 items-center justify-center">
-            {images.map((img, index) => (
+            {galleryItems.map((item, index) => (
               <motion.div
                 key={index}
-                style={{ x: isDesktop ? xRightToLeft : 0, transition: "transform 0.6s ease-out" }}
+                style={{
+                  x: isDesktop ? xRightToLeft : 0,
+                  transition: "transform 0.6s ease-out",
+                }}
                 className="rounded-xl overflow-hidden shadow-lg w-full max-w-sm md:max-w-md lg:max-w-[400px] md:w-1/3"
               >
-                <img
-                  src={img}
-                  alt={`Gallery image ${index + 1}`}
-                  className="w-full h-48 md:h-56 lg:h-[250px] object-cover rounded-xl"
-                />
+                {item.type === "video" ? (
+                  <video
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    className="w-full h-48 md:h-56 lg:h-[250px] object-cover rounded-xl"
+                  >
+                    <source src={item.src} type="video/mp4" />
+                  </video>
+                ) : (
+                  <img
+                    src={item.src}
+                    alt={`Gallery ${index + 1}`}
+                    className="w-full h-48 md:h-56 lg:h-[250px] object-cover rounded-xl"
+                  />
+                )}
               </motion.div>
             ))}
           </div>
+
         </div>
       </div>
 
@@ -154,7 +183,7 @@ Maintains your vehicle’s original shine and condition, helping retain its resa
           {/* Side Image */}
           <div className="flex 2xl:ml-40 justify-center md:justify-start w-full px-4 md:px-0 lg:flex-shrink-0 lg:w-auto lg:mr-8">
             <img 
-              src="https://img.freepik.com/premium-photo/uses-steam-cleaner-modern-black-automobile-is-service-by-woman-inside-car-wash-station_146671-45054.jpg?ga=GA1.1.1515336155.1743059816&semt=ais_hybrid&w=740"
+              src="https://img.freepik.com/premium-photo/detailing-car-seats-with-help-vacuum-extractor-cleaning-car-backseat-with-special-vacuum-nozzle_255847-13594.jpg?ga=GA1.1.1515336155.1743059816&semt=ais_hybrid&w=740"
               className="w-full max-w-sm md:max-w-md lg:max-w-md xl:max-w-lg h-64 md:h-80 2xl:h-125 2xl:ml-[-140px] lg:h-[350px] xl:h-[400px] object-cover object-center mt-4 md:mt-8 lg:mt-0 md:ml-[4%] lg:ml-0 rounded-2xl"
               style={{ marginRight: '30px' }}
               alt="Car care process" 

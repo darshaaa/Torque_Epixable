@@ -451,10 +451,10 @@ const Page = () => {
     {
       id: 9,
       title: "Car Care KIT",
-      image: "https://i.ibb.co/SwVrQ885/TR2.jpg",
+      image: "/product/car.png",
       mrp: 1199,
-      discountedPrice: 720,
-      discountPercentage: 40,
+      discountedPrice: 900,
+      discountPercentage: 25,
       tag: "bestseller"
     },
     {
