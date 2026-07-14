@@ -64,9 +64,11 @@ const ChatBox = () => {
   const [step, setStep] = useState(-1);
   const [chatData, setChatData] = useState({
     name: "",
-    service: [],
     vehicleType: [],
     model: "",
+    vehicleAge: "",
+    vehicleCondition: "",
+    service: [],
     mobile: "",
   });
   const [showForm, setShowForm] = useState(false);
@@ -94,6 +96,7 @@ const ChatBox = () => {
     scrollToBottom();
   }, [messages]);
 
+  // options[0] = services, options[1] = vehicle type (Car/Bike)
   const options = [
     ["Ceramic Coating", "PPF", "Car Detailing", "Sunfilms"],
     ["Car", "Bike"],
@@ -130,7 +133,7 @@ const ChatBox = () => {
       ]);
     }, 800);
     setStep(-1);
-    setChatData({ name: "", service: [], vehicleType: [], model: "", mobile: "" });
+    setChatData({ name: "", vehicleType: [], model: "", vehicleAge: "", vehicleCondition: "", service: [], mobile: "" });
     setSelectedOptions([]);
     setUserInput("");
     setShowForm(false);
@@ -158,81 +161,121 @@ const ChatBox = () => {
   };
 
   const handleSend = () => {
+    // Step -1: Name
     if (step === -1) {
       if (!userInput.trim()) return;
       const name = userInput.trim();
       const userMessage = { sender: "user", text: name };
-      
+
       setChatData(prev => ({ ...prev, name }));
       setMessages(prev => [...prev, userMessage, { sender: "bot", text: null }]);
-      
+
       setTimeout(() => {
         setMessages(prev => [
           ...prev.slice(0, -1),
-          { sender: "bot", text: `Nice to meet you, ${name}! Please select a service.` }
+          { sender: "bot", text: `Nice to meet you, ${name}! Is it for a Car or Bike?` }
         ]);
         setStep(0);
       }, 800);
-      
+
       setUserInput("");
       return;
     }
 
-    if (step === 0 || step === 1) {
+    // Step 0: Car or Bike selection
+    if (step === 0) {
       if (selectedOptions.length === 0) return;
-      const userMessage = {
-        sender: "user",
-        text: selectedOptions.join(", "),
-      };
+      const userMessage = { sender: "user", text: selectedOptions.join(", ") };
+      const vType = selectedOptions[0]?.toLowerCase() || "vehicle";
 
-      let botReply = "";
-      let nextStep = step;
+      setChatData(prev => ({ ...prev, vehicleType: selectedOptions }));
 
-      if (step === 0) {
-        setChatData((prev) => ({ ...prev, service: selectedOptions }));
-        botReply = "Is it for a Car or Bike?";
-        nextStep = 1;
-      } else if (step === 1) {
-        setChatData((prev) => ({ ...prev, vehicleType: selectedOptions }));
-        botReply = `Great! What is your ${selectedOptions.join("/")} model?`;
-        nextStep = 2;
-      }
-
-      setMessages((prev) => [
-        ...prev,
-        userMessage,
-        { sender: "bot", text: null },
-      ]);
+      setMessages(prev => [...prev, userMessage, { sender: "bot", text: null }]);
       setTimeout(() => {
-        setMessages((prev) => [
+        setMessages(prev => [
           ...prev.slice(0, -1),
-          { sender: "bot", text: botReply },
+          { sender: "bot", text: `Which ${vType} do you have?` }
         ]);
-        setStep(nextStep);
+        setStep(1);
         setSelectedOptions([]);
       }, 800);
-    } else if (step === 2) {
+      return;
+    }
+
+    // Step 1: Vehicle model
+    if (step === 1) {
       if (!userInput.trim()) return;
       const userMessage = { sender: "user", text: userInput };
-      const botReply = "Sure, That's a great choice";
+      const vType = chatData.vehicleType[0]?.toLowerCase() || "vehicle";
 
-      setChatData((prev) => ({ ...prev, model: userInput }));
+      setChatData(prev => ({ ...prev, model: userInput }));
+      setMessages(prev => [...prev, userMessage, { sender: "bot", text: null }]);
+      setTimeout(() => {
+        setMessages(prev => [
+          ...prev.slice(0, -1),
+          { sender: "bot", text: `How old is your ${vType}?` }
+        ]);
+        setStep(2);
+      }, 800);
+      setUserInput("");
+      return;
+    }
+
+    // Step 2: Vehicle age
+    if (step === 2) {
+      if (!userInput.trim()) return;
+      const userMessage = { sender: "user", text: userInput };
+      const vType = chatData.vehicleType[0]?.toLowerCase() || "vehicle";
+
+      setChatData(prev => ({ ...prev, vehicleAge: userInput }));
+      setMessages(prev => [...prev, userMessage, { sender: "bot", text: null }]);
+      setTimeout(() => {
+        setMessages(prev => [
+          ...prev.slice(0, -1),
+          { sender: "bot", text: `What's the current condition of your ${vType}?` }
+        ]);
+        setStep(3);
+      }, 800);
+      setUserInput("");
+      return;
+    }
+
+    // Step 3: Vehicle condition
+    if (step === 3) {
+      if (!userInput.trim()) return;
+      const userMessage = { sender: "user", text: userInput };
+
+      setChatData(prev => ({ ...prev, vehicleCondition: userInput }));
+      setMessages(prev => [...prev, userMessage, { sender: "bot", text: null }]);
+      setTimeout(() => {
+        setMessages(prev => [
+          ...prev.slice(0, -1),
+          { sender: "bot", text: "Great! Please select a service." }
+        ]);
+        setStep(4);
+      }, 800);
+      setUserInput("");
+      return;
+    }
+
+    // Step 4: Service selection
+    if (step === 4) {
+      if (selectedOptions.length === 0) return;
+      const userMessage = { sender: "user", text: selectedOptions.join(", ") };
+
+      setChatData(prev => ({ ...prev, service: selectedOptions }));
       setShowForm(true);
 
-      setMessages((prev) => [
-        ...prev,
-        userMessage,
-        { sender: "bot", text: null },
-      ]);
+      setMessages(prev => [...prev, userMessage, { sender: "bot", text: null }]);
       setTimeout(() => {
-        setMessages((prev) => [
+        setMessages(prev => [
           ...prev.slice(0, -1),
-          { sender: "bot", text: botReply },
+          { sender: "bot", text: "Sure, That's a great choice" }
         ]);
       }, 800);
 
       setTimeout(() => {
-        setMessages((prev) => [
+        setMessages(prev => [
           ...prev,
           {
             sender: "bot",
@@ -242,8 +285,9 @@ const ChatBox = () => {
         ]);
       }, 1200);
 
-      setUserInput("");
-      setStep(3);
+      setSelectedOptions([]);
+      setStep(5);
+      return;
     }
   };
 
@@ -311,7 +355,7 @@ const ChatBox = () => {
             <div className="relative flex items-center w-[full] h-[8%] sm:h-[10%] bg-white rounded-t-xl px-2 sm:px-4 overflow-hidden">
               <div className="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 sm:w-10 sm:h-10 rounded-full overflow-hidden z-20 bg-white p-1">
                 <img
-                  src='https://lakdfs.sirv.com/Images/istockphoto-1180568095-1024x1024.jpg'
+                  src='https://i.ibb.co/wr8NL9nd/istockphoto-1180568095-1024x1024.jpg'
                   alt="Chat Icon"
                   className="w-full object-top h-full object-cover rounded-full"
                 />
@@ -359,7 +403,7 @@ const ChatBox = () => {
                     >
                       {msg.sender === "bot" && (
                         <img
-                          src='https://lakdfs.sirv.com/Images/istockphoto-1180568095-1024x1024.jpg'
+                          src='https://i.ibb.co/wr8NL9nd/istockphoto-1180568095-1024x1024.jpg'
                           alt="Bot"
                           className="w-6 h-6 rounded-full object-top object-cover"
                         />
@@ -375,13 +419,10 @@ const ChatBox = () => {
                       </div>
                     </div>
 
-                    {step <= 1 && step >= 0 &&
-                      ((step === 0 &&
-                        msg.text?.includes("Please select a service")) ||
-                        (step === 1 &&
-                          msg.text === "Is it for a Car or Bike?")) && (
+                    {((step === 0 && msg.text?.includes("Is it for a Car or Bike?")) ||
+                      (step === 4 && msg.text?.includes("Please select a service"))) && (
                         <div className="flex flex-wrap ml-7 gap-1.5 self-start">
-                          {options[step].map((opt) => (
+                          {(step === 0 ? options[1] : options[0]).map((opt) => (
                             <OptionCard
                               key={opt}
                               option={opt}
@@ -445,18 +486,24 @@ const ChatBox = () => {
                       onChange={(e) => setUserInput(e.target.value)}
                       onKeyDown={(e) => e.key === "Enter" && handleSend()}
                       className={`flex-1 px-3 py-1.5 border rounded-xl text-sm ${
-                        step > -1 && step <= 1
+                        step === 0 || step === 4
                           ? "bg-gray-200 cursor-not-allowed text-gray-500"
                           : "focus:outline-none focus:border-black"
                       }`}
                       placeholder={
                         step === -1
                           ? "Enter your name..."
-                          : step <= 1
+                          : step === 0 || step === 4
                           ? "Select an option above..."
-                          : "Enter vehicle model..."
+                          : step === 1
+                          ? "Enter vehicle model..."
+                          : step === 2
+                          ? "Enter vehicle age..."
+                          : step === 3
+                          ? "Enter vehicle condition..."
+                          : ""
                       }
-                      disabled={step > -1 && step <= 1}
+                      disabled={step === 0 || step === 4}
                     />
                     <button
                       onClick={handleSend}

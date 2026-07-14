@@ -42,6 +42,19 @@ export default function page() {
         src: "https://res.cloudinary.com/dnr4pvgzd/video/upload/v1782797371/ac-2_icwptt.mp4",
       },
       {
+        type: "video",
+        src: "https://res.cloudinary.com/dnr4pvgzd/video/upload/v1782880132/wid-3_fg1s3n.mp4",
+      },
+      
+      {
+        type: "video",
+        src: "https://res.cloudinary.com/dnr4pvgzd/video/upload/v1782880132/wid-2_nquci2.mp4",
+      },
+      {
+        type: "video",
+        src: "https://res.cloudinary.com/dnr4pvgzd/video/upload/v1782880131/wid-1_g2pzoj.mp4",
+      },
+      {
         type: "image",
         src: "https://img.freepik.com/premium-photo/detailing-car-seats-with-help-vacuum-extractor-cleaning-car-backseat-with-special-vacuum-nozzle_255847-13594.jpg?ga=GA1.1.1515336155.1743059816&semt=ais_hybrid&w=740",
       },

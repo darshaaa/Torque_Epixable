@@ -171,9 +171,9 @@ const onSubmit = async (data) => {
       title: "INTERIOR DISINFECTION",
       description:
         "Eliminate odours and harmful bacteria with our thorough interior disinfection service.",
-      image:
-        "https://i.ibb.co/5XdjfN0V/ID.jpg",
-      linkUrl: "/services/idi"
+      video:
+        "https://res.cloudinary.com/dnr4pvgzd/video/upload/v1782797371/ac-2_icwptt.mp4",
+      linkUrl: "/services/id"
     },
     {
       title: "TRIM RESTORATION",
