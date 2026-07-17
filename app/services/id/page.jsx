@@ -54,18 +54,7 @@ export default function page() {
         type: "video",
         src: "https://res.cloudinary.com/dnr4pvgzd/video/upload/v1782880131/wid-1_g2pzoj.mp4",
       },
-      {
-        type: "image",
-        src: "https://img.freepik.com/premium-photo/detailing-car-seats-with-help-vacuum-extractor-cleaning-car-backseat-with-special-vacuum-nozzle_255847-13594.jpg?ga=GA1.1.1515336155.1743059816&semt=ais_hybrid&w=740",
-      },
-      {
-        type: "image",
-        src: "https://img.freepik.com/premium-photo/nanoceramic-coating-leather-car-seat-brown-upholstery-by-worker-blue-gloves-with-sponge-bottle_136863-2309.jpg?ga=GA1.1.1515336155.1743059816&semt=ais_hybrid&w=740",
-      },
-      {
-        type: "image",
-        src: "https://img.freepik.com/free-photo/still-life-cleaning-tools_23-2150552221.jpg?ga=GA1.1.1515336155.1743059816&semt=ais_hybrid&w=740",
-      },
+
     ];
 
     const scrollRef1 = useRef(null);

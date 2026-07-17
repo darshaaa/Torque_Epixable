@@ -67,7 +67,7 @@ const ChatBox = () => {
     vehicleType: [],
     model: "",
     vehicleAge: "",
-    vehicleCondition: "",
+    vehicleColor: "",
     service: [],
     mobile: "",
   });
@@ -98,7 +98,7 @@ const ChatBox = () => {
 
   // options[0] = services, options[1] = vehicle type (Car/Bike)
   const options = [
-    ["Ceramic Coating", "PPF", "Car Detailing", "Sunfilms"],
+    ["Ceramic Coating", "PPF", "Car Detailing", "Sunfilms","graphene coating"],
     ["Car", "Bike"],
   ];
 
@@ -133,7 +133,7 @@ const ChatBox = () => {
       ]);
     }, 800);
     setStep(-1);
-    setChatData({ name: "", vehicleType: [], model: "", vehicleAge: "", vehicleCondition: "", service: [], mobile: "" });
+    setChatData({ name: "", vehicleType: [], model: "", vehicleAge: "", vehicleColor: "", service: [], mobile: "" });
     setSelectedOptions([]);
     setUserInput("");
     setShowForm(false);
@@ -160,6 +160,54 @@ const ChatBox = () => {
     window.location.href = "tel:9686968315";
   };
 
+  // Car/Bike selection is instant - no Send button needed
+  const handleVehicleTypeSelect = (opt) => {
+    const userMessage = { sender: "user", text: opt };
+
+    setChatData(prev => ({ ...prev, vehicleType: [opt] }));
+    setMessages(prev => [...prev, userMessage, { sender: "bot", text: null }]);
+
+    setTimeout(() => {
+      setMessages(prev => [
+        ...prev.slice(0, -1),
+        { sender: "bot", text: `${opt} Model:` }
+      ]);
+      setStep(1);
+    }, 800);
+
+    setSelectedOptions([]);
+  };
+
+  // Service selection is instant - no Send button needed
+  const handleServiceSelect = (opt) => {
+    const userMessage = { sender: "user", text: opt };
+
+    setChatData(prev => ({ ...prev, service: [opt] }));
+    setShowForm(true);
+
+    setMessages(prev => [...prev, userMessage, { sender: "bot", text: null }]);
+    setTimeout(() => {
+      setMessages(prev => [
+        ...prev.slice(0, -1),
+        { sender: "bot", text: "Sure, That's a great choice" }
+      ]);
+    }, 800);
+
+    setTimeout(() => {
+      setMessages(prev => [
+        ...prev,
+        {
+          sender: "bot",
+          text: "I will call you soon to discuss details. Can I have your mobile number?",
+        },
+        { sender: "bot", text: "Please type your phone number 😊" },
+      ]);
+    }, 1200);
+
+    setSelectedOptions([]);
+    setStep(5);
+  };
+
   const handleSend = () => {
     // Step -1: Name
     if (step === -1) {
@@ -182,38 +230,18 @@ const ChatBox = () => {
       return;
     }
 
-    // Step 0: Car or Bike selection
-    if (step === 0) {
-      if (selectedOptions.length === 0) return;
-      const userMessage = { sender: "user", text: selectedOptions.join(", ") };
-      const vType = selectedOptions[0]?.toLowerCase() || "vehicle";
-
-      setChatData(prev => ({ ...prev, vehicleType: selectedOptions }));
-
-      setMessages(prev => [...prev, userMessage, { sender: "bot", text: null }]);
-      setTimeout(() => {
-        setMessages(prev => [
-          ...prev.slice(0, -1),
-          { sender: "bot", text: `Which ${vType} do you have?` }
-        ]);
-        setStep(1);
-        setSelectedOptions([]);
-      }, 800);
-      return;
-    }
-
     // Step 1: Vehicle model
     if (step === 1) {
       if (!userInput.trim()) return;
       const userMessage = { sender: "user", text: userInput };
-      const vType = chatData.vehicleType[0]?.toLowerCase() || "vehicle";
+      const vType = chatData.vehicleType[0] || "vehicle";
 
       setChatData(prev => ({ ...prev, model: userInput }));
       setMessages(prev => [...prev, userMessage, { sender: "bot", text: null }]);
       setTimeout(() => {
         setMessages(prev => [
           ...prev.slice(0, -1),
-          { sender: "bot", text: `How old is your ${vType}?` }
+          { sender: "bot", text: `${vType} Color:` }
         ]);
         setStep(2);
       }, 800);
@@ -221,18 +249,18 @@ const ChatBox = () => {
       return;
     }
 
-    // Step 2: Vehicle age
+    // Step 2: Vehicle color
     if (step === 2) {
       if (!userInput.trim()) return;
       const userMessage = { sender: "user", text: userInput };
-      const vType = chatData.vehicleType[0]?.toLowerCase() || "vehicle";
+      const vType = chatData.vehicleType[0] || "vehicle";
 
-      setChatData(prev => ({ ...prev, vehicleAge: userInput }));
+      setChatData(prev => ({ ...prev, vehicleColor: userInput }));
       setMessages(prev => [...prev, userMessage, { sender: "bot", text: null }]);
       setTimeout(() => {
         setMessages(prev => [
           ...prev.slice(0, -1),
-          { sender: "bot", text: `What's the current condition of your ${vType}?` }
+          { sender: "bot", text: `Age of the ${vType}:` }
         ]);
         setStep(3);
       }, 800);
@@ -240,12 +268,12 @@ const ChatBox = () => {
       return;
     }
 
-    // Step 3: Vehicle condition
+    // Step 3: Vehicle age
     if (step === 3) {
       if (!userInput.trim()) return;
       const userMessage = { sender: "user", text: userInput };
 
-      setChatData(prev => ({ ...prev, vehicleCondition: userInput }));
+      setChatData(prev => ({ ...prev, vehicleAge: userInput }));
       setMessages(prev => [...prev, userMessage, { sender: "bot", text: null }]);
       setTimeout(() => {
         setMessages(prev => [
@@ -258,37 +286,6 @@ const ChatBox = () => {
       return;
     }
 
-    // Step 4: Service selection
-    if (step === 4) {
-      if (selectedOptions.length === 0) return;
-      const userMessage = { sender: "user", text: selectedOptions.join(", ") };
-
-      setChatData(prev => ({ ...prev, service: selectedOptions }));
-      setShowForm(true);
-
-      setMessages(prev => [...prev, userMessage, { sender: "bot", text: null }]);
-      setTimeout(() => {
-        setMessages(prev => [
-          ...prev.slice(0, -1),
-          { sender: "bot", text: "Sure, That's a great choice" }
-        ]);
-      }, 800);
-
-      setTimeout(() => {
-        setMessages(prev => [
-          ...prev,
-          {
-            sender: "bot",
-            text: "I will call you soon to discuss details. Can I have your mobile number?",
-          },
-          { sender: "bot", text: "Please type your phone number 😊" },
-        ]);
-      }, 1200);
-
-      setSelectedOptions([]);
-      setStep(5);
-      return;
-    }
   };
 
   const handleSubmitForm = () => {
@@ -428,11 +425,9 @@ const ChatBox = () => {
                               option={opt}
                               selected={selectedOptions.includes(opt)}
                               onClick={() =>
-                                setSelectedOptions((prev) =>
-                                  prev.includes(opt)
-                                    ? prev.filter((o) => o !== opt)
-                                    : [...prev, opt]
-                                )
+                                step === 0
+                                  ? handleVehicleTypeSelect(opt)
+                                  : handleServiceSelect(opt)
                               }
                             />
                           ))}
@@ -498,9 +493,9 @@ const ChatBox = () => {
                           : step === 1
                           ? "Enter vehicle model..."
                           : step === 2
-                          ? "Enter vehicle age..."
+                          ? "Enter vehicle color..."
                           : step === 3
-                          ? "Enter vehicle condition..."
+                          ? "Enter vehicle age..."
                           : ""
                       }
                       disabled={step === 0 || step === 4}
