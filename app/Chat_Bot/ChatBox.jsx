@@ -61,9 +61,8 @@ const ChatBox = () => {
   const [hasBeenClicked, setHasBeenClicked] = useState(false);
   const [messages, setMessages] = useState([]);
   const [userInput, setUserInput] = useState("");
-  const [step, setStep] = useState(-1);
+  const [step, setStep] = useState(0);
   const [chatData, setChatData] = useState({
-    name: "",
     vehicleType: [],
     model: "",
     vehicleAge: "",
@@ -109,17 +108,22 @@ const ChatBox = () => {
       ]);
       const timer1 = setTimeout(() => {
         setMessages([
-          { sender: "bot", text: "Hello, I am Saanvi" }
+          { sender: "bot", text: "Hello! 👋 I'm Saanvi, your virtual assistant." }
         ]);
       }, 800);
-      
+
       const timer2 = setTimeout(() => {
-        setMessages(prev => [...prev, { sender: "bot", text: "May I know your name?" }]);
+        setMessages(prev => [...prev, { sender: "bot", text: "Thank you for contacting Torque Detailing Studio. How can I assist you today?" }]);
       }, 1500);
-      
+
+      const timer3 = setTimeout(() => {
+        setMessages(prev => [...prev, { sender: "bot", text: "Please let us know which vehicle you're looking for a service for:" }]);
+      }, 2200);
+
       return () => {
         clearTimeout(timer1);
         clearTimeout(timer2);
+        clearTimeout(timer3);
       };
     }
   }, [isChatOpen]);
@@ -128,12 +132,13 @@ const ChatBox = () => {
     setMessages([{ sender: "bot", text: null }]);
     setTimeout(() => {
       setMessages([
-        { sender: "bot", text: "Hello, I am Saanvi" },
-        { sender: "bot", text: "May I know your name?", style: { marginTop: "-80px" } }
+        { sender: "bot", text: "Hello! 👋 I'm Saanvi, your virtual assistant." },
+        { sender: "bot", text: "Thank you for contacting Torque Detailing Studio. How can I assist you today?" },
+        { sender: "bot", text: "Please let us know which vehicle you're looking for a service for:", style: { marginTop: "-80px" } }
       ]);
     }, 800);
-    setStep(-1);
-    setChatData({ name: "", vehicleType: [], model: "", vehicleAge: "", vehicleColor: "", service: [], mobile: "" });
+    setStep(0);
+    setChatData({ vehicleType: [], model: "", vehicleAge: "", vehicleColor: "", service: [], mobile: "" });
     setSelectedOptions([]);
     setUserInput("");
     setShowForm(false);
@@ -209,27 +214,6 @@ const ChatBox = () => {
   };
 
   const handleSend = () => {
-    // Step -1: Name
-    if (step === -1) {
-      if (!userInput.trim()) return;
-      const name = userInput.trim();
-      const userMessage = { sender: "user", text: name };
-
-      setChatData(prev => ({ ...prev, name }));
-      setMessages(prev => [...prev, userMessage, { sender: "bot", text: null }]);
-
-      setTimeout(() => {
-        setMessages(prev => [
-          ...prev.slice(0, -1),
-          { sender: "bot", text: `Nice to meet you, ${name}! Is it for a Car or Bike?` }
-        ]);
-        setStep(0);
-      }, 800);
-
-      setUserInput("");
-      return;
-    }
-
     // Step 1: Vehicle model
     if (step === 1) {
       if (!userInput.trim()) return;
@@ -416,7 +400,7 @@ const ChatBox = () => {
                       </div>
                     </div>
 
-                    {((step === 0 && msg.text?.includes("Is it for a Car or Bike?")) ||
+                    {((step === 0 && msg.text?.includes("Please let us know which vehicle")) ||
                       (step === 4 && msg.text?.includes("Please select a service"))) && (
                         <div className="flex flex-wrap ml-7 gap-1.5 self-start">
                           {(step === 0 ? options[1] : options[0]).map((opt) => (
@@ -486,9 +470,7 @@ const ChatBox = () => {
                           : "focus:outline-none focus:border-black"
                       }`}
                       placeholder={
-                        step === -1
-                          ? "Enter your name..."
-                          : step === 0 || step === 4
+                        step === 0 || step === 4
                           ? "Select an option above..."
                           : step === 1
                           ? "Enter vehicle model..."

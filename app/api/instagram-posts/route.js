@@ -1,32 +1,26 @@
 // app/api/instagram-posts/route.js
 
 export async function GET() {
-  const INSTAGRAM_ACCESS_TOKEN = 'EAAPHZBijhj30BPYVfYa9Smdjrx39WMuEN5dRZB3invhxZCgItZBt4aZAO4ZC6TwhEwFFvxtEJk1x5HwMgIOAzBe8Q5bUsEFFRTfDAMGjZBlmdJzxg4X9LM9zVoo1n624X7ctdZCPnJ7k39227TZCCHkO7v1Fteyx1haV3Jq2biL8ZCFlBWJfsp4FwgbFgl782g0mxX4xutCkVLPEltg6ur';
-  const INSTAGRAM_USER_ID = '17841470271684652';
+  const INSTAGRAM_ACCESS_TOKEN = process.env.INSTAGRAM_ACCESS_TOKEN;
+  const INSTAGRAM_USER_ID = process.env.INSTAGRAM_USER_ID;
 
   try {
     const response = await fetch(
-      `https://graph.facebook.com/v18.0/17841470271684652/media?fields=id,caption,media_type,media_url,permalink,timestamp,like_count,comments_count&access_token=EAAPHZBijhj30BPYVfYa9Smdjrx39WMuEN5dRZB3invhxZCgItZBt4aZAO4ZC6TwhEwFFvxtEJk1x5HwMgIOAzBe8Q5bUsEFFRTfDAMGjZBlmdJzxg4X9LM9zVoo1n624X7ctdZCPnJ7k39227TZCCHkO7v1Fteyx1haV3Jq2biL8ZCFlBWJfsp4FwgbFgl782g0mxX4xutCkVLPEltg6ur`
+      `https://graph.instagram.com/v18.0/${INSTAGRAM_USER_ID}/media?fields=id,caption,media_type,media_url,permalink,timestamp,like_count,comments_count&access_token=${INSTAGRAM_ACCESS_TOKEN}`
     );
-
-    if (!response.ok) {
-      throw new Error(`Instagram API error: ${response.status}`);
-    }
 
     const data = await response.json();
 
-    // Check for Instagram API errors
-    if (data.error) {
-      throw new Error(`Instagram API error: ${data.error.message}`);
+    if (!response.ok || data.error) {
+      throw new Error(
+        `Instagram API error: ${data.error?.message || response.status} (code: ${data.error?.code}, subcode: ${data.error?.error_subcode})`
+      );
     }
 
-    // Return the data using Next.js 13+ Response API
     return Response.json(data);
 
   } catch (error) {
     console.error('Instagram API Error:', error);
-    
-    // Return error response
     return Response.json(
       { error: error.message || 'Failed to fetch Instagram posts' },
       { status: 500 }
@@ -34,7 +28,6 @@ export async function GET() {
   }
 }
 
-// Handle CORS if needed
 export async function OPTIONS() {
   return new Response(null, {
     status: 200,

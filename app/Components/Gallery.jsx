@@ -13,24 +13,33 @@ const Gallery = () => {
 
             <div className="w-full mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl">
                 <div className="w-full h-64">
-                    <img
+                    <video
                         className="w-full h-full object-cover rounded-xl shadow-lg"
-                        src="https://img.freepik.com/premium-photo/applying-ppf-tail-lights_1322206-113751.jpg?ga=GA1.1.1515336155.1743059816&semt=ais_hybrid&w=740"
-                        alt="PPF Tail Lights"
+                        src="https://res.cloudinary.com/dnr4pvgzd/video/upload/v1780979396/ppf1-new-final_oykzxz.mp4"
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
                     />
                 </div>
                 <div className="w-full h-64">
-                    <img
+                    <video
                         className="w-full h-full object-cover rounded-xl shadow-lg"
-                        src="https://img.freepik.com/premium-photo/applying-nanoceramics-cars-car-paint-protection-concept_153608-1180.jpg?ga=GA1.1.1515336155.1743059816&semt=ais_hybrid&w=740"
-                        alt="Nano Coating"
+                        src="https://res.cloudinary.com/dnr4pvgzd/video/upload/v1780978335/ppfreel1-new_wsb7es.mp4"
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
                     />
                 </div>
                 <div className="w-full h-64">
-                    <img
+                    <video
                         className="w-full h-full object-cover rounded-xl shadow-lg"
-                        src="https://img.freepik.com/free-photo/beautiful-car-interior-clean-up-service_23-2149212256.jpg?ga=GA1.1.1515336155.1743059816&semt=ais_hybrid&w=740"
-                        alt="Interior Cleanup"
+                        src="https://res.cloudinary.com/dnr4pvgzd/video/upload/v1780978382/ppfreel2-new_cyt7e1.mp4"
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
                     />
                 </div>
             </div>
