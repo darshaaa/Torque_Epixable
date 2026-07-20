@@ -405,7 +405,7 @@ const Page = () => {
     },
     {
       id: 4,
-      title: "Glass Cleaner",
+      title: "Engine Coating",
       image: "https://i.ibb.co/SwVrQ885/TR2.jpg",
       mrp: 290,
       discountedPrice: 218,

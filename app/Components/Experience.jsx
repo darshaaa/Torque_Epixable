@@ -6,7 +6,7 @@ import React from 'react';
 
 const stats = [
   { value: '2+', label: 'Years of Excellence' },
-  { value: '200+', label: 'Vehicles Serviced' },
+  { value: '500+', label: 'Vehicles Serviced' },
   { value: '4', label: 'Premium Brand Partners' },
   { value: '100%', label: 'Honest Advisory' },
 ];

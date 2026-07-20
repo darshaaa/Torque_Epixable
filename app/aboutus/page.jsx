@@ -13,9 +13,9 @@ const Page = () => {
   ];
 
   const img = [
-    "https://i.ibb.co/6RT7j6Nr/2025-05-07.jpg",
-    "https://i.ibb.co/84SL0b6S/TQ4.jpg",
-    "https://i.ibb.co/wh1wKb02/unnamed.jpg",
+    "/images/gc2.jpg",
+    "/images/ppf6.jpg",
+    "/images/bikes5.jpg",
   ];
 
   const scrollRef1 = useRef(null);

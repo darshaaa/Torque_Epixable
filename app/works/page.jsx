@@ -153,7 +153,7 @@ const Page = () => {
                       Welcome!
                     </h1>
                     <p className="text-white text-sm sm:text-base mt-2 max-w-2xl">
-                      For more than 35 years, we have been bringing ambitious
+                      We have been bringing ambitious
                       projects to life. The pride of our work, the rigor in the
                       execution, the spirit of team, and integrity are the
                       values that animate us on a daily basis.
