@@ -208,9 +208,9 @@ const onSubmit = async (data) => {
 
         <div className="relative w-full overflow-x- px-6 md:px-16 lg:px-20 pt-28">
           <img
-            src="/images/services.jpg"
+            src="/services.jpg"
             alt="Our Services"
-            className="w-full h-[500px] object-cover rounded-3xl"
+            className="w-full h-[500px] object-cover object-[center_20%] rounded-3xl "
           />
           <div className="absolute inset-0 flex flex-col justify-end pb-10 md:pb-20 px-6 md:px-16 lg:px-24 bg-gradient-to-t from-black/80 to-transparent rounded-3xl">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white anton tracking-wide">
@@ -485,7 +485,7 @@ const onSubmit = async (data) => {
             <div className="space-y-3">
               <h3 className="text-[#00DAFF] text-xl sm:text-2xl font-bold">OPENING HOURS</h3>
               <div className="space-y-1">
-                <p className="text-sm sm:text-base">Mon - Sunday: 9am - 8pm</p>
+                <p className="text-sm sm:text-base">Mon - Sunday: 10am - 8pm</p>
                 <p className="text-sm sm:text-base text-gray-600">(By Appointment Only)</p>
               </div>
             </div>

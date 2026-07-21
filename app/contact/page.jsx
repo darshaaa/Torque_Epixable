@@ -131,7 +131,7 @@ const Contact = () => {
                 torquedetailingstudio@gmail.com
               </a>
             </p>
-            <p className="mt-2 italic">Mon - Sunday: 9am - 8pm (By Appointment)</p>
+            <p className="mt-2 italic">Mon - Sunday: 10am - 8pm (By Appointment)</p>
           </div>
           <iframe
             className="w-full h-72 rounded-xl border-2 border-[#00DAFF]"
