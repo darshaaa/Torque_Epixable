@@ -98,7 +98,7 @@ const SlidingPage = () => {
     className="w-full h-96 sm:h-[28rem] rounded-2xl cursor-pointer relative overflow-hidden"
   >
     <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover" >
-      <source src="https://res.cloudinary.com/dnr4pvgzd/video/upload/v1780978289/Porsche_Final-new_rijyfp.mp4" type="video/mp4" />
+      <source src="https://res.cloudinary.com/jeurhxi3/video/upload/v1787637728/Porsche_Final-new_rijyfp.mp4" type="video/mp4" />
     </video>
     <motion.div className="absolute bottom-0 left-0 right-0 h-[30%] lg:mt-10 flex-col flex justify-center items-center bg-black bg-opacity-80 px-4">
       <h1 className="text-xl sm:text-2xl font-semibold text-white mb-2">Paint Protection Film</h1>
@@ -114,7 +114,7 @@ const SlidingPage = () => {
     className="w-full h-96 sm:h-[28rem] rounded-2xl cursor-pointer relative overflow-hidden"
   >
     <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover">
-      <source src="https://res.cloudinary.com/dnr4pvgzd/video/upload/v1780979396/ppf1-new-final_oykzxz.mp4" type="video/mp4" />
+      <source src="https://res.cloudinary.com/jeurhxi3/video/upload/v1787637509/ppf1-new-final_oykzxz.mp4" type="video/mp4" />
     </video>
     <motion.div className="absolute bottom-0 left-0 right-0 h-[30%] lg:mt-10 flex-col flex justify-center items-center bg-black bg-opacity-80 px-4">
       <h1 className="text-xl sm:text-2xl font-semibold text-white mb-2">Graphene Coating</h1>
@@ -130,7 +130,7 @@ const SlidingPage = () => {
     className="w-full h-96 sm:h-[28rem] rounded-2xl cursor-pointer relative overflow-hidden"
   >
     <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover">
-      <source src="https://res.cloudinary.com/dnr4pvgzd/video/upload/v1780981606/Ceramic_Torque-final_parqlg.mp4" type="video/mp4" />
+      <source src="https://res.cloudinary.com/jeurhxi3/video/upload/v1787637419/Ceramic_Torque-final_parqlg.mp4" type="video/mp4" />
     </video>
     <motion.div className="absolute bottom-0 left-0 right-0 h-[30%] lg:mt-10 flex-col flex justify-center items-center bg-black bg-opacity-80 px-4">
       <h1 className="text-xl sm:text-2xl font-semibold text-white mb-2">Ceramic Coating</h1>

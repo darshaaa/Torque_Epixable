@@ -39,19 +39,19 @@ export default function page() {
     const galleryItems = [
       {
         type: "video",
-        src: "https://res.cloudinary.com/dnr4pvgzd/video/upload/v1782880711/v4_xyeqwg.mp4",
+        src: "https://res.cloudinary.com/jeurhxi3/video/upload/v1787557062/v4_xyeqwg.mp4",//video 4//
       },
       {
         type: "video",
-        src: "https://res.cloudinary.com/dnr4pvgzd/video/upload/v1782880711/v1_ke5icy.mp4",
+        src: "https://res.cloudinary.com/jeurhxi3/video/upload/v1787557123/v1_ke5icy.mp4",//video 5//
       },
       {
         type: "video",
-        src: "https://res.cloudinary.com/dnr4pvgzd/video/upload/v1782880711/v2_muuwyo.mp4",
+        src: "https://res.cloudinary.com/jeurhxi3/video/upload/v1787556965/v2_muuwyo.mp4",//video 3//
       },
       {
         type: "video",
-        src: "https://res.cloudinary.com/dnr4pvgzd/video/upload/v1782880711/v3_omjh8k.mp4",
+        src: "https://res.cloudinary.com/jeurhxi3/video/upload/v1787556874/v3_omjh8k.mp4",//video 2//
       },
       {
         type: "image",
@@ -84,7 +84,7 @@ export default function page() {
       {/* Hero Section */}
 <div className="w-full h-[100vh] lg:h-[80vh] 2xl:h-[70vh] flex items-center relative overflow-hidden">
   <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover">
-    <source src="https://res.cloudinary.com/dnr4pvgzd/video/upload/v1781689005/vx_k2al6l.mp4" type="video/mp4" />
+    <source src="https://res.cloudinary.com/jeurhxi3/video/upload/v1787637051/vx_k2al6l.mp4" type="video/mp4" />
   </video>
   <div className="absolute inset-0 bg-black/70" />
   <div className="relative z-10 w-full max-w-7xl mx-auto px-4">

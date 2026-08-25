@@ -59,7 +59,7 @@ export default function page() {
       {/* Hero Section */}
 <div className="w-full h-[100vh] lg:h-[80vh] 2xl:h-[70vh] flex items-center relative overflow-hidden">
   <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover">
-    <source src="https://res.cloudinary.com/dnr4pvgzd/video/upload/v1780981606/Ceramic_Torque-final_parqlg.mp4" type="video/mp4" />
+    <source src="https://res.cloudinary.com/jeurhxi3/video/upload/v1787637419/Ceramic_Torque-final_parqlg.mp4" type="video/mp4" />
   </video>
   <div className="absolute inset-0 bg-black/70" />
   <div className="relative z-10 w-full max-w-7xl mx-auto px-4">

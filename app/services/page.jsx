@@ -107,14 +107,14 @@ const onSubmit = async (data) => {
   title: "PAINT PROTECTION FILM",
   description:
     "PAINT PROTECTION FILM or PPF This is a transparent film generally applied to painted surfaces of a new or used car in order to protect the vehicle’s paint from stone chips, bug splatters, minor abrasions and other damages.",
-  video: "https://res.cloudinary.com/dnr4pvgzd/video/upload/v1780978289/Porsche_Final-new_rijyfp.mp4",
+  video: "https://res.cloudinary.com/jeurhxi3/video/upload/v1787637728/Porsche_Final-new_rijyfp.mp4",
   linkUrl: "/services/ppf"
 },
     {
       title: "GRAPHENE COATING",
       description:
         "Graphene coating is a cutting-edge protective layer that enhances the durability and shine of your vehicle's paint. It provides superior resistance to scratches, UV rays, and environmental contaminants.",
-          video: "https://res.cloudinary.com/dnr4pvgzd/video/upload/v1780979396/ppf1-new-final_oykzxz.mp4",
+          video: "https://res.cloudinary.com/jeurhxi3/video/upload/v1787637509/ppf1-new-final_oykzxz.mp4",
          linkUrl: "/services/gc"
     },
     {
@@ -122,7 +122,7 @@ const onSubmit = async (data) => {
       description:
         "Ceramic coating is a liquid polymer applied to the exterior of a vehicle, creating a protective layer that enhances shine and provides resistance against scratches, UV rays, and chemical stains.",
       video:
-        "https://res.cloudinary.com/dnr4pvgzd/video/upload/v1780981606/Ceramic_Torque-final_parqlg.mp4",
+        "https://res.cloudinary.com/jeurhxi3/video/upload/v1787637419/Ceramic_Torque-final_parqlg.mp4",// video 23//
       linkUrl: "/services/cc"
     },
     {
@@ -130,7 +130,7 @@ const onSubmit = async (data) => {
       description:
         "Deep cleaning and protection of all interior surfaces including seats, carpets, and dashboard. Keeps your ride looking brand new inside.",
       video:
-        "https://res.cloudinary.com/dnr4pvgzd/video/upload/v1781688491/id_ubv1tv.mov",
+        "https://res.cloudinary.com/jeurhxi3/video/upload/v1787637317/id_ubv1tv_1.mov",//video 22//
       linkUrl: "/services/id"
     },
     {
@@ -138,7 +138,7 @@ const onSubmit = async (data) => {
       description:
         "Thorough cleaning, restoration, and finishing of a vehicle's exterior to produce a show-quality level of detail.",
       video:
-        "https://res.cloudinary.com/dnr4pvgzd/video/upload/v1781692177/ed_turhm9.mov",
+        "https://res.cloudinary.com/jeurhxi3/video/upload/v1787636987/ed_turhm9.mov",//video 19//
       linkUrl: "/services/ed"
     },
     
@@ -147,7 +147,7 @@ const onSubmit = async (data) => {
       description:
         "Transform your vehicle with high-quality vinyl wraps. Choose from a variety of colors and custom designs for endless personalization.",
       video:
-        "https://res.cloudinary.com/dnr4pvgzd/video/upload/v1781689005/vx_k2al6l.mp4",
+        "https://res.cloudinary.com/jeurhxi3/video/upload/v1787637051/vx_k2al6l.mp4",//video 20//
       linkUrl: "/services/vx"
     },
     {
@@ -155,7 +155,7 @@ const onSubmit = async (data) => {
       description:
         " It enhances privacy, reduces glare, blocks UV rays, and protects your interior from fading and heat damage. Customizable options offer the perfect blend of style and function.",
       video:
-        "https://res.cloudinary.com/dnr4pvgzd/video/upload/v1781688559/wt_xjnpng.mov",
+        "https://res.cloudinary.com/jeurhxi3/video/upload/v1787637229/wt_xjnpng.mov",//video 21//
       linkUrl: "/services/wt"
     },
     {
@@ -163,7 +163,7 @@ const onSubmit = async (data) => {
       description:
         "Enhance visibility and safety with an advanced hydrophobic coating that keeps your windshield clean, providing clearer vision during heavy rains and reducing hard water spots.",
       video:
-        "https://res.cloudinary.com/dnr4pvgzd/video/upload/v1781692810/gc_rfo6nc.mov",
+        "https://res.cloudinary.com/jeurhxi3/video/upload/v1787636809/gc_rfo6nc.mov",//video 17//
       linkUrl: "/services/wc"
     },
    
@@ -172,7 +172,7 @@ const onSubmit = async (data) => {
       description:
         "Eliminate odours and harmful bacteria with our thorough interior disinfection service.",
       video:
-        "https://res.cloudinary.com/dnr4pvgzd/video/upload/v1784534577/IMG_0743_lyhifr.mp4",
+        "https://res.cloudinary.com/jeurhxi3/video/upload/v1787556183/IMG_0743_lyhifr.mp4",//video1//
       linkUrl: "/services/id"
     },
     {
@@ -188,7 +188,7 @@ const onSubmit = async (data) => {
       description:
         "With a deep clean and sanitization of your A/C ducts and filters. You can be rest assured, with clean and fresh air inside your car",
       video:
-        "https://res.cloudinary.com/dnr4pvgzd/video/upload/v1781692284/ac_lfotsm.mov",
+        "https://res.cloudinary.com/jeurhxi3/video/upload/v1787636900/ac_lfotsm.mov",//video 18//
       linkUrl: "/services/acs"
     },
     {

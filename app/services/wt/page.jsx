@@ -39,23 +39,23 @@ export default function page() {
     const galleryItems = [
       {
         type: "video",
-        src: "https://res.cloudinary.com/dnr4pvgzd/video/upload/v1782880130/wid-6_bq7syb.mp4",
+        src: "https://res.cloudinary.com/jeurhxi3/video/upload/v1787558939/wid-6_bq7syb.mp4",//video 8//
       },
       {
         type: "video",
-        src: "https://res.cloudinary.com/dnr4pvgzd/video/upload/v1782880129/wid-7_ofjqul.mp4",
+        src: "https://res.cloudinary.com/jeurhxi3/video/upload/v1787559007/wid-5_butlvt.mp4",//video 10//
       },
       {
         type: "video",
-        src: "https://res.cloudinary.com/dnr4pvgzd/video/upload/v1782880129/wid-5_butlvt.mp4",
+        src: "https://res.cloudinary.com/jeurhxi3/video/upload/v1787558939/wid-6_bq7syb.mp4",//video 9//
       },
       {
         type: "video",
-        src: "https://res.cloudinary.com/dnr4pvgzd/video/upload/v1782880129/wid-4_yf2n3c.mp4",
+        src: "https://res.cloudinary.com/jeurhxi3/video/upload/v1787636060/wid-4_yf2n3c.mp4",//video 11//
       },
       {
         type: "video",
-        src: "https://res.cloudinary.com/dnr4pvgzd/video/upload/v1782880131/wid-1_g2pzoj.mp4",
+        src: "https://res.cloudinary.com/jeurhxi3/video/upload/v1787558857/wid-1_g2pzoj.mp4",//video 7//
       },
       {
         type: "video",
@@ -63,7 +63,7 @@ export default function page() {
       },
       {
         type: "video",
-        src: "https://res.cloudinary.com/dnr4pvgzd/video/upload/v1782880132/wid-3_fg1s3n.mp4",
+        src: "https://res.cloudinary.com/jeurhxi3/video/upload/v1787558640/wid-2_nquci2.mp4",//video 6//
       },
       {
         type: "image",
@@ -88,7 +88,7 @@ export default function page() {
      {/* Hero Section */}
 <div className="w-full h-[100vh] lg:h-[80vh] 2xl:h-[70vh] flex items-center relative overflow-hidden">
   <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover">
-    <source src="https://res.cloudinary.com/dnr4pvgzd/video/upload/v1781688559/wt_xjnpng.mov" type="video/mp4" />
+    <source src="https://res.cloudinary.com/jeurhxi3/video/upload/v1787637229/wt_xjnpng.mov" type="video/mp4" />
   </video>
   <div className="absolute inset-0 bg-black/70" />
   <div className="relative z-10 w-full max-w-7xl mx-auto px-4">

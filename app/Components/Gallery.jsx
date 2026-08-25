@@ -15,7 +15,7 @@ const Gallery = () => {
                 <div className="w-full h-64">
                     <video
                         className="w-full h-full object-cover rounded-xl shadow-lg"
-                        src="https://res.cloudinary.com/dnr4pvgzd/video/upload/v1780979396/ppf1-new-final_oykzxz.mp4"
+                        src="https://res.cloudinary.com/jeurhxi3/video/upload/v1787637509/ppf1-new-final_oykzxz.mp4"// video 24//
                         autoPlay
                         muted
                         loop
@@ -25,7 +25,7 @@ const Gallery = () => {
                 <div className="w-full h-64">
                     <video
                         className="w-full h-full object-cover rounded-xl shadow-lg"
-                        src="https://res.cloudinary.com/dnr4pvgzd/video/upload/v1780978335/ppfreel1-new_wsb7es.mp4"
+                        src="https://res.cloudinary.com/jeurhxi3/video/upload/v1787637679/ppfreel1-new_wsb7es.mp4"
                         autoPlay
                         muted
                         loop
@@ -35,7 +35,7 @@ const Gallery = () => {
                 <div className="w-full h-64">
                     <video
                         className="w-full h-full object-cover rounded-xl shadow-lg"
-                        src="https://res.cloudinary.com/dnr4pvgzd/video/upload/v1780978382/ppfreel2-new_cyt7e1.mp4"
+                        src="https://res.cloudinary.com/jeurhxi3/video/upload/v1787637619/ppfreel2-new_cyt7e1.mp4"
                         autoPlay
                         muted
                         loop

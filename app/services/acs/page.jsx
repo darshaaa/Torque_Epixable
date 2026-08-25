@@ -44,11 +44,11 @@ export default function page() {
     const galleryItems = [
       {
         type: "video",
-        src: "https://res.cloudinary.com/dnr4pvgzd/video/upload/v1782797371/ac-2_icwptt.mp4",
+        src: "https://res.cloudinary.com/jeurhxi3/video/upload/v1787636212/ac-2_icwptt.mp4",//video 13//
       },
       {
         type: "video",
-        src: "https://res.cloudinary.com/dnr4pvgzd/video/upload/v1782797371/ac-1_yp2f4n.mp4",
+        src: "https://res.cloudinary.com/jeurhxi3/video/upload/v1787636152/ac-1_yp2f4n.mp4",//video 12//
       },
       {
         type: "image",
@@ -81,7 +81,7 @@ export default function page() {
       {/* Hero Section */}
 <div className="w-full h-[100vh] lg:h-[80vh] 2xl:h-[70vh] flex items-center relative overflow-hidden">
   <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover">
-    <source src="https://res.cloudinary.com/dnr4pvgzd/video/upload/v1781692284/ac_lfotsm.mov" type="video/mp4" />
+    <source src="https://res.cloudinary.com/jeurhxi3/video/upload/v1787636900/ac_lfotsm.mov" type="video/mp4" />
   </video>
   <div className="absolute inset-0 bg-black/70" />
   <div className="relative z-10 w-full max-w-7xl mx-auto px-4">
